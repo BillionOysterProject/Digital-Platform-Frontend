@@ -11,7 +11,7 @@ var Lesson = new Module('lesson');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Lesson.register(function(app, auth, database) {
+Lesson.register(function(app, auth, database, circles) {
 
   //We enable routing. By default the Package Object is passed to the routes
   Lesson.routes(app, auth, database);

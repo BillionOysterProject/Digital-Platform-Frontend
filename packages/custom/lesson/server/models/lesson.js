@@ -8,7 +8,7 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Article Schema
+ * Lesson Schema
  */
 var LessonSchema = new Schema({
   created: {
@@ -77,8 +77,7 @@ var LessonSchema = new Schema({
     },
     handoutsFileInput: {
       type: Array,
-      required: false,
-      trim: true
+      required: false
     },
     vocabulary: {
       type: Array,
@@ -87,7 +86,8 @@ var LessonSchema = new Schema({
   },
   background: {
     type: String,
-    required: false
+    required: false,
+    trim: true
   },
   instructionPlan: {
     engage: {
@@ -96,7 +96,7 @@ var LessonSchema = new Schema({
       trim: true
     },
     teacherResources: {
-      explore: String,
+      type: String,
       required: false,
       trim: true
     },
@@ -150,21 +150,21 @@ var LessonSchema = new Schema({
 /**
  * Validations
  */
-ArticleSchema.path('title').validate(function(title) {
+LessonSchema.path('lessonUpload.title').validate(function(title) {
   return !!title;
 }, 'Title cannot be blank');
 
-ArticleSchema.path('content').validate(function(content) {
-  return !!content;
-}, 'Content cannot be blank');
+LessonSchema.path('lessonUpload.unit').validate(function(unit) {
+  return !!unit;
+}, 'Unit cannot be blank');
 
 /**
  * Statics
  */
-ArticleSchema.statics.load = function(id, cb) {
+LessonSchema.statics.load = function(id, cb) {
   this.findOne({
     _id: id
   }).populate('user', 'name username').exec(cb);
 };
 
-mongoose.model('Article', ArticleSchema);
+mongoose.model('Lesson', LessonSchema);
