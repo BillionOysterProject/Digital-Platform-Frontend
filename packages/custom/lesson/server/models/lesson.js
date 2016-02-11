@@ -30,49 +30,49 @@ var LessonSchema = new Schema({
   lessonOverview: {
     grade: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     classPeriods: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     setting: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     subjectAreas: {
       type: Array,
-      required: true,
+      required: false,
       trim: true
     },
     protocolConnections: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     lessonSummary: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     }
   },
   lessonObjectives: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   materialsResources: {
     supplies: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     teacherResources: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     handoutsFileInput: {

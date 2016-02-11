@@ -19,6 +19,7 @@ module.exports = function(Lessons) {
                 if (err) return next(err);
                 if (!lesson) return next(new Error('Failed to load lesson ' + id));
                 req.lesson = lesson;
+                res.json(lesson);
                 next();
             });
         },
@@ -26,12 +27,13 @@ module.exports = function(Lessons) {
          * Create an lesson
          */
         create: function(req, res) {
-            console.log('over here, brah', req.body);
+
             var lesson = new Lesson(req.body);
             lesson.user = req.user;
-
+            console.log(req.body);
             lesson.save(function(err) {
                 if (err) {
+                    console.log(err)
                     return res.status(500).json({
                         error: 'Cannot save the lesson'
                     });
@@ -59,7 +61,7 @@ module.exports = function(Lessons) {
                 user: {
                     name: req.user.name
                 },
-                name: req.lesson.title,
+                // name: req.lesson.title,
                 url: config.hostname + '/lessons/' + req.lesson._id
             });
 

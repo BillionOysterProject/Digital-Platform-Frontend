@@ -257,7 +257,7 @@
             "LESSON UPLOAD": {
                 "formItems": [
                     {
-                        "name": "lessonTitle",
+                        "name": "title",
                         "label": "LESSON TITLE",
                         "type": "input",
                         "colClass": "col-md-8",
