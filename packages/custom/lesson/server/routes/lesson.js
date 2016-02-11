@@ -82,7 +82,7 @@ module.exports = function(Lessons, app, auth) {
   app.route('/api/lessons')
     .get(lessons.all)
     .post(auth.requiresLogin, hasPermissions, lessons.create);
-  app.route('/api/lessons/:articleId')
+  app.route('/api/lessons/:lessonId')
     .get(auth.isMongoId, lessons.show);
     // .put(auth.isMongoId, auth.requiresLogin, hasAuthorization, hasPermissions, lessons.update)
     // .delete(auth.isMongoId, auth.requiresLogin, hasAuthorization, hasPermissions, lessons.destroy);

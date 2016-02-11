@@ -26,6 +26,7 @@ module.exports = function(Lessons) {
          * Create an lesson
          */
         create: function(req, res) {
+            console.log('over here, brah', req.body);
             var lesson = new Lesson(req.body);
             lesson.user = req.user;
 
