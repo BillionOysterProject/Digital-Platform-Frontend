@@ -30,8 +30,8 @@ module.exports = function(Unit, app, auth) {
     .get(unit.all)
     .post(auth.requiresLogin, hasPermissions, unit.create);
   app.route('/api/units/:unitId')
-    .get(auth.isMongoId, unit.unit);
+    .get(auth.isMongoId, unit.units);
 
   // Finish with setting up the unitId param
-  app.param('unitId', unit.unit);
+  app.param('unitId', unit.units);
 };
