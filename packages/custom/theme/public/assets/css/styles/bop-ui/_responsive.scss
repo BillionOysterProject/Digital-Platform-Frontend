@@ -43,7 +43,7 @@
         display: inline-block;
         position: absolute;
         left: 12px;
-        top: -10px;
+        top: -10;
     }
 
     .navbar-nav.navbar-right > li > .dropdown-menu:before{
@@ -65,10 +65,10 @@
     }
 
     .nav-open .navbar-collapse{
-        @include transform-translate-x(0px);
+        @include transform-translate-x(0);
     }
     .nav-open .navbar .container{
-        @include transform-translate-x(-200px);
+        @include transform-translate-x(-200);
     }
 
     .navbar-burger{
@@ -100,15 +100,15 @@
     }
 
     .body-click {
-        right: 230px;
+        right: 230;
     }
 
     body{
         position: relative;
 
         & > .navbar-collapse {
-            width: 230px;
-            @include transform-translate-x(230px);
+            width: 230;
+            @include transform-translate-x(230);
         }
     }
 
@@ -116,11 +116,11 @@
         .container{
             width: 100%;
             position: relative;
-            @include transform-translate-x(0px);
+            @include transform-translate-x(0);
             @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
             .nav-open &{
-                @include transform-translate-x(-230px);
+                @include transform-translate-x(-230);
             }
         }
 
@@ -132,7 +132,7 @@
     }
 
     .nav-open .navbar-collapse{
-        @include transform-translate-x(0px);
+        @include transform-translate-x(0);
     }
 
     .navbar-toggle .icon-bar{
@@ -152,8 +152,8 @@
     .navbar-header .navbar-toggle {
         margin-top: 17px;
         margin-bottom: 17px;
-        width: 40px;
-        height: 40px;
+        width: 40;
+        height: 40;
     }
     .bar1,
     .bar2,
@@ -161,14 +161,14 @@
       outline: 1px solid transparent;
     }
     .bar1 {
-      top: 0px;
+      top: 0;
       @include bar-animation($topbar-back);
     }
     .bar2 {
       opacity: 1;
     }
     .bar3 {
-      bottom: 0px;
+      bottom: 0;
       @include bar-animation($bottombar-back);
     }
     .toggled .bar1 {
@@ -279,7 +279,7 @@
         width: 20%;
         float: none !important;
         display: block;
-        margin: 0 auto 10px;
+        margin: 0 auto 10;
     }
     .media-post .media-body{
         width: 100%;

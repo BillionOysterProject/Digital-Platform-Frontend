@@ -69,14 +69,14 @@ $padding-base-horizontal:      16px !default;
 $padding-round-vertical:        9px !default;
 $padding-round-horizontal:     18px !default;
 
-$padding-simple-vertical:      10px !default;
+$padding-simple-vertical:      10 !default;
 $padding-simple-horizontal:    18px !default;
 
 $padding-large-vertical:       14px !default;
-$padding-large-horizontal:     30px !default;
+$padding-large-horizontal:     30 !default;
 
 $padding-small-vertical:        5px !default;
-$padding-small-horizontal:     10px !default;
+$padding-small-horizontal:     10 !default;
 
 $padding-xs-vertical:           1px !default;
 $padding-xs-horizontal:         5px !default;
@@ -84,27 +84,27 @@ $padding-xs-horizontal:         5px !default;
 $padding-label-vertical:        2px !default;
 $padding-label-horizontal:     12px !default;
 
-$margin-large-vertical:        30px !default;
+$margin-large-vertical:        30 !default;
 $margin-base-vertical:         15px !default;
 
-$margin-bottom:                0 0 10px 0 !default;
+$margin-bottom:                0 0 10 0 !default;
 $border-radius-small:           3px !default;
 $border-radius-base:            4px !default;
 $border-radius-large:           6px !default;
-$border-radius-extreme:        10px !default;
+$border-radius-extreme:        10 !default;
 
 $border-radius-large-top:      $border-radius-large $border-radius-large 0 0 !default;
 $border-radius-large-bottom:   0 0 $border-radius-large $border-radius-large !default;
 
-$btn-round-radius:             30px !default;
+$btn-round-radius:             30 !default;
 
-$height-base:                  40px !default;
+$height-base:                  40 !default;
 
 $font-size-base:               14px !default;
 $font-size-small:              12px !default;
 $font-size-medium:             16px !default; 
 $font-size-large:              18px !default;
-$font-size-large-navbar:       20px !default;
+$font-size-large-navbar:       20 !default;
 
 $font-size-h1:                 52px !default;
 $font-size-h2:                 36px !default;
@@ -122,31 +122,31 @@ $font-weight-semi:           500 !default;
 $font-weight-bold:           600 !default;
 
 $line-height-general:          1.5 !default;
-$line-height:                 20px !default;
+$line-height:                 20 !default;
 $line-height-lg:              54px !default;
 
 
-$border-radius-top:        10px 10px 0 0 !default;
-$border-radius-bottom:     0 0 10px 10px !default;
+$border-radius-top:        10 10 0 0 !default;
+$border-radius-bottom:     0 0 10 10 !default;
 
 $dropdown-shadow:          1px 2px 3px rgba(0, 0, 0, 0.125);
 
 $general-transition-time:  300ms !default;
 
 $slow-transition-time:           370ms !default; 
-$dropdown-coordinates:      29px -50px !default;
+$dropdown-coordinates:      29px -50 !default;
 
 $fast-transition-time:           150ms !default;
-$select-coordinates:         50% -40px !default;
+$select-coordinates:         50% -40 !default;
 
 $transition-linear:                                   linear !default;
 $transition-bezier:         cubic-bezier(0.34, 1.61, 0.7, 1) !default;
 $transition-ease:           ease 0s;
 
-$navbar-padding-a:               10px 15px;
+$navbar-padding-a:               10 15px;
 $navbar-margin-a:                15px  3px;
 
-$padding-social-a:               10px  5px;
+$padding-social-a:               10  5px;
 
 $navbar-margin-a-btn:            15px 3px;
 $navbar-margin-a-btn-round:      16px 3px;
@@ -154,8 +154,8 @@ $navbar-margin-a-btn-round:      16px 3px;
 $navbar-padding-a-icons:         6px 15px;
 $navbar-margin-a-icons:          6px  3px;
 
-$navbar-padding-brand:           20px 15px;
-$navbar-margin-brand:             5px  0px;
+$navbar-padding-brand:           20 15px;
+$navbar-margin-brand:             5px  0;
 
 $navbar-margin-brand-icons:      12px auto;
 
@@ -175,11 +175,11 @@ $width-icon-sm:					 32px;
 $padding-icon-sm:			     4px;
 $border-radius-icon-sm:			 7px;
 
-$height-icon-message:			 40px;
-$width-icon-message:			 40px;
+$height-icon-message:			 40;
+$width-icon-message:			 40;
 
-$height-icon-message-sm: 		 20px;
-$width-icon-message-sm:			 20px;
+$height-icon-message-sm: 		 20;
+$width-icon-message-sm:			 20;
 
 
 

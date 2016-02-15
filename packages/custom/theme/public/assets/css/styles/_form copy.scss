@@ -19,8 +19,8 @@ $form-disabled-color:              $lightgray-dark !default;
 
 $search-query-value:               17px !default;
 
-$search-icon-width:                30px !default;
-$search-icon-line-height:          30px !default;
+$search-icon-width:                30 !default;
+$search-icon-line-height:          30 !default;
 
 // Exports
 //------------------------------------------------------
@@ -100,7 +100,7 @@ $search-icon-line-height:          30px !default;
           @include radius($type: border-radius, $value: $search-query-value);
       }
       @at-root .input-group .form-control:last-child {
-          // padding: 0 $search-query-value 0 10px;
+          // padding: 0 $search-query-value 0 10;
           @include radius($type: border-top-left-radius, $value: 0);
           @include radius($type: border-bottom-left-radius, $value: 0);
       }

@@ -20,14 +20,14 @@
 .radio .icons {
   color: $medium-gray;
   display: block;
-  height: 20px;
+  height: 20;
   left: 0;
   position: absolute;
   top: 0;
-  width: 20px;
+  width: 20;
   text-align: center;
   line-height: 21px;
-  font-size: 20px;
+  font-size: 20;
   cursor: pointer;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
@@ -125,14 +125,14 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  * ============================================================ */
 .has-switch {
-    border-radius: 30px;
+    border-radius: 30;
     cursor: pointer;
     display: inline-block;
     line-height: 1.72222;
     overflow: hidden;
     position: relative;
     text-align: left;
-    width: 60px;    
+    width: 60;    
  
    -webkit-user-select: none;  
    -moz-user-select: none;
@@ -142,7 +142,7 @@
      
     /*   this code is for fixing safari bug with hidden overflow for border-radius   */
     -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    -webkit-mask-size: 60px 24px;
+    -webkit-mask-size: 60 24px;
     mask: url('../img/mask.png') 0 0 no-repeat;
 }
 .has-switch.deactivate {
@@ -157,7 +157,7 @@
 .has-switch > div {
    position: relative;
    top: 0;
-   width: 100px;
+   width: 100;
 }
 .has-switch > div.switch-animate {
   -webkit-transition: left 0.25s ease-out;
@@ -193,7 +193,7 @@
     padding-top: 5px;
     position: relative;
     text-align: center;
-    text-indent: -10px;
+    text-indent: -10;
     width: 50%;
     z-index: 1;
   -webkit-transition: 0.25s ease-out;
@@ -202,14 +202,14 @@
 .has-switch span.switch-left {
     background-color: $info-color;
     border-left: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 30px 0 0 30px;
+    border-radius: 30 0 0 30;
     color: #FFFFFF;
 }
 .has-switch .switch-off span.switch-left{
     background-color: $medium-gray;
 }
 .has-switch span.switch-right {
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 30 30 0;
   background-color: $info-color;
   color: #ffffff;
   text-indent: 1px;
@@ -233,7 +233,7 @@
   transition: 0.25s ease-out;
 }
 .has-switch .switch-on .fa-check:before{
-    margin-left: 10px;
+    margin-left: 10;
 }
 .has-switch:hover .switch-on label{
     margin: 1px -17px;
