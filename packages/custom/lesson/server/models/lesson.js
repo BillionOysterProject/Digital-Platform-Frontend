@@ -8,8 +8,9 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Article Schema
+ * Lesson Schema
  */
+ //TODO > make handoutsFileInput, vocabulary, nycScienceScopeSequence, ngssStandards, commonCoreEla, commonCoreMath
 var LessonSchema = new Schema({
   created: {
     type: Date,
@@ -30,64 +31,64 @@ var LessonSchema = new Schema({
   lessonOverview: {
     grade: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     classPeriods: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     setting: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     subjectAreas: {
-      type: Array,
-      required: true,
+      type: String,
+      required: false,
       trim: true
     },
     protocolConnections: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     lessonSummary: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     }
   },
   lessonObjectives: {
     type: String,
-    required: true,
+    required: false,
     trim: true
   },
   materialsResources: {
     supplies: {
       type: String,
-      required: true,
+      required: false,
       trim: true
     },
     teacherResources: {
       type: String,
-      required: true,
-      trim: true
-    },
-    handoutsFileInput: {
-      type: Array,
       required: false,
       trim: true
     },
+    handoutsFileInput: {
+      type: String,
+      required: false
+    },
     vocabulary: {
-      type: Array,
+      type: String,
       required: false
     }
   },
   background: {
     type: String,
-    required: false
+    required: false,
+    trim: true
   },
   instructionPlan: {
     engage: {
@@ -96,7 +97,7 @@ var LessonSchema = new Schema({
       trim: true
     },
     teacherResources: {
-      explore: String,
+      type: String,
       required: false,
       trim: true
     },
@@ -118,19 +119,19 @@ var LessonSchema = new Schema({
   },
   standards: {
     nycScienceScopeSequence: {
-      type: Array,
+      type: String,
       required: false
     },
     ngssStandards: {
-      type: Array,
+      type: String,
       required: false
     },
     commonCoreEla: {
-      type: Array,
+      type: String,
       required: false
     },
     commonCoreMath: {
-      type: Array,
+      type: String,
       required: false
     }
   },
@@ -150,21 +151,21 @@ var LessonSchema = new Schema({
 /**
  * Validations
  */
-ArticleSchema.path('title').validate(function(title) {
+LessonSchema.path('lessonUpload.title').validate(function(title) {
   return !!title;
 }, 'Title cannot be blank');
 
-ArticleSchema.path('content').validate(function(content) {
-  return !!content;
-}, 'Content cannot be blank');
+LessonSchema.path('lessonUpload.unit').validate(function(unit) {
+  return !!unit;
+}, 'Unit cannot be blank');
 
 /**
  * Statics
  */
-ArticleSchema.statics.load = function(id, cb) {
+LessonSchema.statics.load = function(id, cb) {
   this.findOne({
     _id: id
   }).populate('user', 'name username').exec(cb);
 };
 
-mongoose.model('Article', ArticleSchema);
+mongoose.model('Lesson', LessonSchema);

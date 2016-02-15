@@ -1,0 +1,67 @@
+// Panels
+//------------------------------------------------------
+
+
+.library-item {
+
+  .panel {
+    border-color: $default-color;
+  }
+  .panel-footer{
+    padding:10px 15px;
+    background-color: transparent;
+    border: none;
+    //background-color:#f5f5f5;
+    //border-top:1px solid #ddd;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;
+  }
+}
+
+
+
+
+.panel-primary {
+
+  .panel-heading {
+    color:#fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.panel-oyster {
+
+  .panel-heading {
+    color:#fff;
+    background-color: $success-color;
+    border-color: $success-color;
+  }
+}
+
+.panel-mobile_organisms {
+
+  .panel-heading {
+    color:#fff;
+    background-color: $default-color;
+    border-color: $default-color;
+  }
+
+}
+.panel-sessile_organisms {
+
+  .panel-heading {
+    color:#fff;
+    background-color: $warning-color;
+    border-color: $warning-color;
+  }
+
+}
+.panel-water_quality {
+
+  .panel-heading {
+    color:#fff;
+    background-color: $info-color;
+    border-color: $info-color;
+  }
+}
