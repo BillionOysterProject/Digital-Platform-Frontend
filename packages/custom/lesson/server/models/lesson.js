@@ -10,6 +10,7 @@ var mongoose = require('mongoose'),
 /**
  * Lesson Schema
  */
+ //TODO > make handoutsFileInput, vocabulary, nycScienceScopeSequence, ngssStandards, commonCoreEla, commonCoreMath
 var LessonSchema = new Schema({
   created: {
     type: Date,
@@ -44,7 +45,7 @@ var LessonSchema = new Schema({
       trim: true
     },
     subjectAreas: {
-      type: Array,
+      type: String,
       required: false,
       trim: true
     },
@@ -76,11 +77,11 @@ var LessonSchema = new Schema({
       trim: true
     },
     handoutsFileInput: {
-      type: Array,
+      type: String,
       required: false
     },
     vocabulary: {
-      type: Array,
+      type: String,
       required: false
     }
   },
@@ -118,19 +119,19 @@ var LessonSchema = new Schema({
   },
   standards: {
     nycScienceScopeSequence: {
-      type: Array,
+      type: String,
       required: false
     },
     ngssStandards: {
-      type: Array,
+      type: String,
       required: false
     },
     commonCoreEla: {
-      type: Array,
+      type: String,
       required: false
     },
     commonCoreMath: {
-      type: Array,
+      type: String,
       required: false
     }
   },

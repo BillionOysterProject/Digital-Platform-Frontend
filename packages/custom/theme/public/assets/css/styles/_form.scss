@@ -1,0 +1,74 @@
+// Variables
+//------------------------------------------------------
+
+
+
+//BOP Custom scripts
+.panel {
+
+  .panel-heading {
+    background:transparent;
+    border-radius:0px;
+    border-bottom:0px;
+    padding:20px 20px 7px 20px;
+    position:relative;z-index:3;
+    min-height:48px;
+  }
+  .label {
+    padding: 20px;
+  }
+}
+.panel-heading {
+
+  .panel-title{
+    font-family:'Montserrat';
+    text-transform:uppercase;
+    display:inline-block;
+    letter-spacing:0.02em;
+    font-size:15px;
+    font-weight:600;
+    margin:0;
+    padding:0;
+    line-height:normal;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-text-stroke:0px;
+    filter:alpha(opacity=40);
+    -webkit-transition:opacity 0.3s ease;
+    transition:opacity 0.3s ease;
+  }
+  .panel-controls{
+    float:right;margin-top:-3px;
+  }
+  .panel-controls ul{
+    margin:0;
+    padding:0;
+  }
+  .panel-controls ul li{
+    display:inline-block;
+    list-style:none;
+    line-height:0;
+  }
+}
+
+.panel-body {
+
+  label {
+    padding-top: 20px;
+    text-transform: uppercase;
+    //font-weight: bolder;
+  }
+}
+.portlet-collapse {-moz-osx-font-smoothing:grayscale;
+  /* font-family:"pages-icon";
+  font-style:normal;
+  font-variant:normal;
+  font-weight:normal; */
+  color: #a1a1a1;
+  line-height:1;
+  text-transform:none;
+}
+
+
+// Exports
+//------------------------------------------------------

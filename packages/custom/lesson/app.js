@@ -16,6 +16,10 @@ Lesson.register(function (app, auth, database, circles) {
     //We enable routing. By default the Package Object is passed to the routes
     Lesson.routes(app, auth, database);
 
+    Lesson.aggregateAsset('css', 'lesson.css');
+
+    Lesson.angularDependencies(['ngDropzone', 'ui.tinymce']);
+
     //We are adding a link to the main menu for all authenticated users
     Lesson.menus.add({
         title: 'Lesson',
@@ -24,9 +28,6 @@ Lesson.register(function (app, auth, database, circles) {
         menu: 'main'
     });
 
-    Lesson.aggregateAsset('css', 'lesson.css');
-
-    Lesson.angularDependencies(['formly', 'formlyBootstrap']);
     /**
       //Uncomment to use. Requires meanio@0.3.7 or above
       // Save settings with callback
@@ -36,13 +37,13 @@ Lesson.register(function (app, auth, database, circles) {
       }, function(err, settings) {
           //you now have the settings object
       });
-  
+
       // Another save settings example this time with no callback
       // This writes over the last settings.
       Lesson.settings({
           'anotherSettings': 'some value'
       });
-  
+
       // Get settings. Retrieves latest saved settigns
       Lesson.settings(function(err, settings) {
           //you now have the settings object

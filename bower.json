@@ -3,6 +3,7 @@
   "dependencies": {
     "jquery": "latest",
     "angular": "latest",
+    "angular-animate": "latest",
     "angular-resource": "latest",
     "angular-cookies": "latest",
     "angular-mocks": "latest",
@@ -14,7 +15,8 @@
     "angular-ui-select": "latest",
     "angular-sanitize": "latest",
     "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
-    "angular-formly": "latest",
-    "angular-formly-templates-bootstrap": "latest"
+    "angular-dropzone": "^0.1.2",
+    "ngQuill": "ng-quill#^1.4.0",
+    "angular-ui-tinymce": "^0.0.13"
   }
 }
