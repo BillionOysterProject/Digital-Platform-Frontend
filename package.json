@@ -10,7 +10,6 @@
     "karma": "node node_modules/karma/bin/karma start karma.conf.js",
     "test": "gulp test",
     "test-e2e": "gulp e2e.test",
-    "postinstall": "node tools/scripts/postinstall.js"
   },
   "dependencies": {
     "assetmanager": "^1.2.2",
