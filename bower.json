@@ -18,7 +18,8 @@
     "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
     "angular-dropzone": "^0.1.2",
     "ngQuill": "ng-quill#^1.4.0",
-    "angular-ui-tinymce": "^0.0.13"
+    "angular-ui-tinymce": "^0.0.13",
+    "ng-i18next": "~0.4.2"
   },
   "resolutions": {
     "angular": "^1.5"
