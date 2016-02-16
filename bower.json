@@ -19,6 +19,7 @@
     "angular-dropzone": "^0.1.2",
     "ngQuill": "ng-quill#^1.4.0",
     "angular-ui-tinymce": "^0.0.13",
+    "ng-clip": "latest",
     "ng-i18next": "~0.4.2"
   },
   "resolutions": {
