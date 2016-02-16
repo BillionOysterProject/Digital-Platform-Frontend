@@ -8,14 +8,14 @@
 
   .panel-heading {
     background:transparent;
-    border-radius:0px;
-    border-bottom:0px;
-    padding:20px 20px 7px 20px;
+    border-radius:0;
+    border-bottom:0;
+    padding:20 20 7px 20;
     position:relative;z-index:3;
     min-height:48px;
   }
   .label {
-    padding: 20px;
+    padding: 20;
   }
 }
 .panel-heading {
@@ -32,7 +32,7 @@
     line-height:normal;
     overflow:hidden;
     text-overflow:ellipsis;
-    -webkit-text-stroke:0px;
+    -webkit-text-stroke:0;
     filter:alpha(opacity=40);
     -webkit-transition:opacity 0.3s ease;
     transition:opacity 0.3s ease;
@@ -54,7 +54,7 @@
 .panel-body {
 
   label {
-    padding-top: 20px;
+    padding-top: 20;
     text-transform: uppercase;
     //font-weight: bolder;
   }

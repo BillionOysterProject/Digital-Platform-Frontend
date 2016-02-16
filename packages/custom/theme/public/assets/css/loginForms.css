@@ -50,7 +50,7 @@ html {
 }
 
 .main-form {
-    width: 550px;
+    width: 550;
     height: 435px;
     margin-left: -374px;
 }
@@ -60,14 +60,14 @@ html {
 }
 
 .login-form__left {
-    width: 440px;
+    width: 440;
     height: 100%;
     float: left;
     padding: 34px 0 0 27px;
 }
 
 .login-form__left h2, .forgot_password_form h2 {
-    font-size: 30px;
+    font-size: 30;
     padding-bottom: 4px;
     font-family: "futura_bkbook";
     margin: 0;
@@ -81,7 +81,7 @@ html {
 
 .main-form .input-wrapper {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 10;
 }
 
 .main-form .input-wrapper input {
@@ -109,7 +109,7 @@ html {
 .pic.email {
     position: absolute;
     background: url("/theme/assets/img/mail_login.png") no-repeat;
-    width: 30px;
+    width: 30;
     height: 21px;
     top: 18px;
     right: 28px;
@@ -118,8 +118,8 @@ html {
 .pic.password {
     position: absolute;
     background: url("/theme/assets/img/eye_password.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 30px;
+    width: 40;
+    height: 30;
     top: 16px;
     right: 22px;
     cursor: pointer;
@@ -127,8 +127,8 @@ html {
 
 .login-form__left .icon_hide_password {
     background: url("/theme/assets/img/eye_password_disabled.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 30px;
+    width: 40;
+    height: 30;
     top: 16px;
     right: 22px;
 }
@@ -140,7 +140,7 @@ html {
     width: 125px;
     height: 34px;
     bottom: 39px;
-    right: -40px;
+    right: -40;
     background: #0588a0;
     text-align: center;
     border-radius: 5px;
@@ -154,7 +154,7 @@ html {
     position: absolute;
     left: 50%;
     top: 100%;
-    border-top: 10px solid #0588a0;
+    border-top: 10 solid #0588a0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     margin-left: -4px;
@@ -178,8 +178,8 @@ html {
     background: blue;
     text-align: center;
     border-radius: 3px;
-    min-width: 30px;
-    max-width: 150px;
+    min-width: 30;
+    max-width: 150;
 }
 
 .error_message:after {
@@ -188,7 +188,7 @@ html {
     position: absolute;
     left: 50%;
     top: 100%;
-    border-top: 10px solid blue;
+    border-top: 10 solid blue;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     margin-left: -4px;
@@ -266,7 +266,7 @@ html {
     height: 100%;
     float: left;
     background: url("/theme/assets/img/devide_line.png") no-repeat 50% 30%;
-    padding: 0 10px;
+    padding: 0 10;
 }
 
 .register-form .login-form__center {
@@ -287,12 +287,12 @@ html {
 .login-form__right {
     height: 100%;
     float: left;
-    width: 270px;
+    width: 270;
     padding-left: 26px;
 }
 .login-form__right .social_wrap {
     width: 235px;
-    height: 270px;
+    height: 270;
     margin-top: 36px;
     padding-left: 0;
     display: block;
@@ -330,11 +330,11 @@ html {
 }
 
 .login-form__right .social_icon {
-    width: 230px;
-    height: 60px;
+    width: 230;
+    height: 60;
     border: 1px solid #e1e1e0;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 10;
     list-style-type: none;
     vertical-align: middle;
     display: inline-block;
@@ -347,7 +347,7 @@ html {
 .login-form__right .social_icon .button {
     display: block;
     text-decoration: none;
-    padding: 22px 0 22px 60px;
+    padding: 22px 0 22px 60;
     line-height: 1;
     color: #959595;
     position: relative;
@@ -370,9 +370,9 @@ html {
     content: '';
     position: absolute;
     background: url("/theme/assets/img/social_in.png") no-repeat 50% 50%;
-    width: 50px;
+    width: 50;
     height: 47px;
-    top: 10px;
+    top: 10;
     left: 0;
 }
 
@@ -381,8 +381,8 @@ html {
     position: absolute;
     background: url("/theme/assets/img/social_fb.png") no-repeat 50% 50%;
     width: 41px;
-    height: 40px;
-    top: 10px;
+    height: 40;
+    top: 10;
     left: 8px;
 }
 
@@ -390,9 +390,9 @@ html {
     content: '';
     position: absolute;
     background: url("/theme/assets/img/social_github.png") no-repeat 50% 50%;
-    width: 40px;
-    height: 40px;
-    top: 10px;
+    width: 40;
+    height: 40;
+    top: 10;
     left: 8px;
 }
 
@@ -400,9 +400,9 @@ html {
     content: '';
     position: absolute;
     background: url("/theme/assets/img/social_tw.png") no-repeat 50% 50%;
-    width: 40px;
+    width: 40;
     height: 41px;
-    top: 10px;
+    top: 10;
     left: 8px;
 }
 
@@ -410,9 +410,9 @@ html {
     content: '';
     position: absolute;
     background: url("/theme/assets/img/social_g+.png") no-repeat 50% 50%;
-    width: 40px;
+    width: 40;
     height: 41px;
-    top: 10px;
+    top: 10;
     left: 8px;
 }
 
@@ -425,19 +425,19 @@ html {
 .woman_ninja_left {
     position: absolute;
     top: 75px;
-    left: -410px;
+    left: -410;
     pointer-events: none;
 }
 
 .registration_form {
-    width: 440px;
+    width: 440;
     float: left;
-    margin-right: 10px;
+    margin-right: 10;
 }
 
 .forgot_password_form {
     padding: 34px 27px;
-    min-height: 280px;
+    min-height: 280;
     height: auto;
     width: 465px;
     margin-left: -232px;

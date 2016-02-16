@@ -3,15 +3,15 @@
 }
 .modal-content {
     border: 0 none;
-    border-radius: 10px;
+    border-radius: 10;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15), 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .modal-dialog {
-    padding-top: 60px;
+    padding-top: 60;
 }
 .modal-footer {
     border-top: 0 none;
-    padding: 10px 10px;        
+    padding: 10 10;        
 }
 .modal-footer .modal-footer .btn-default.btn-simple{
     font-weight: 400;
@@ -29,7 +29,7 @@
 }
 .modal-small{
     .modal-dialog{
-        max-width: 350px;
+        max-width: 350;
     }
 }
 .modal-small{
@@ -38,14 +38,14 @@
         display: block;
         width: 14px;
         position: relative;
-        margin-top: 40px;
-        margin-bottom: 30px;
+        margin-top: 40;
+        margin-bottom: 30;
         font-size: $font-paragraph;
     }
     .divider:after{
         position: absolute;
         content: "";
-        right: -140px;
+        right: -140;
         top: 12px;
         height: 1px;
         width: 115px;
@@ -54,7 +54,7 @@
     .divider:before{
         position: absolute;
         content: "";
-        left: -140px;
+        left: -140;
         top: 12px;
         height: 1px;
         width: 115px;
@@ -68,7 +68,7 @@
     text-align: center;
     
     .btn-social{
-        margin: 0 10px;
+        margin: 0 10;
     }
 }
 .modal-backdrop.in {

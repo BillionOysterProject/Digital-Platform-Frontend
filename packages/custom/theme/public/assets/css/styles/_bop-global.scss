@@ -137,8 +137,8 @@ $darkgray-light:              #656D78 !default; */
 // We use this to creat animation effect.
 // Examples:
 // @include keyframes(move-the-object) {
-//   0%   { left: 100px; }
-//   100% { left: 200px; }
+//   0%   { left: 100; }
+//   100% { left: 200; }
 // }
 // .object-to-animate {
 //   @include animation(move-the-object .5s 1);

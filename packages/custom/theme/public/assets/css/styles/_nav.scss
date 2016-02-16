@@ -17,7 +17,7 @@
     font-weight: 600;
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 20;
 }
 .navbar-nav > li > a {
     margin-top: 13px;
@@ -29,7 +29,7 @@
     font-size: 18px;
 }
 .navbar-brand{
-    padding: 20px 15px;
+    padding: 20 15px;
 }
 
 .navbar .btn{
@@ -135,7 +135,7 @@
     height: 22px;
     padding: 0;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 20;
     color: #777777;
 }
 .navbar-transparent .navbar-form .form-control, [class*="navbar-ct"] .navbar-form .form-control{
@@ -168,15 +168,15 @@
 
 .dropdown-menu > li > a {
 /*     border-bottom: 1px solid #DDDDDD; */
-    padding: 8px 20px;
+    padding: 8px 20;
     color: #333333;
 }
 .dropdown-menu > li:first-child > a{
-    border-radius: 10px 10px 0 0;
+    border-radius: 10 10 0 0;
 }
 .dropdown-menu > li:last-child > a{
     border-bottom: 0 none;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10 10;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     background-color: #F5F5F5;
@@ -216,9 +216,9 @@
         padding: 0;
         z-index: 9000;
         position: absolute;
-        -webkit-border-radius: 10px;
+        -webkit-border-radius: 10;
         box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.125);
-        border-radius: 10px;
+        border-radius: 10;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -242,11 +242,11 @@
 
     }
     .navbar-nav > li.open > .dropdown-menu, .open .dropdown-menu{
-        -webkit-transform-origin: 29px -50px;
-        -moz-transform-origin: 29px -50px;
-        -o-transform-origin: 29px -50px;
-        -ms-transform-origin: 29px -50px;
-        transform-origin: 29px -50px;
+        -webkit-transform-origin: 29px -50;
+        -moz-transform-origin: 29px -50;
+        -o-transform-origin: 29px -50;
+        -ms-transform-origin: 29px -50;
+        transform-origin: 29px -50;
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -o-transform: scale(1);
@@ -280,7 +280,7 @@
         position: absolute;
         left: 100%;
         margin-left: -60%;
-        top: -10px;
+        top: -10;
     }
 }
 
@@ -308,7 +308,7 @@
         text-align: center;
     }
     .navbar-collapse .navbar-form {
-        width: 170px;
+        width: 170;
         margin: 0 auto;
     }
 

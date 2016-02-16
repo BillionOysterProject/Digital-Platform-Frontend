@@ -40,9 +40,9 @@
     }
     .copyright{
         color: $default-states-color;
-        padding: 10px 15px;
+        padding: 10 15px;
         margin: 15px 3px;
-        line-height: 20px;
+        line-height: 20;
         text-align: center;
     }
     hr{
@@ -57,12 +57,12 @@
     nav > ul{
        font-size: 16px;
        li{
-            margin-left: 20px;
+            margin-left: 20;
             float: left;
         }
         a{
-            padding: 10px 0px;
-            margin: 15px 10px 15px 0px;
+            padding: 10 0;
+            margin: 15px 10 15px 0;
         }
     }
 }
@@ -119,14 +119,14 @@
 }
 
 .footer-big{
-    padding-top: 30px;
+    padding-top: 30;
     
     hr{
         margin-bottom: 0;
-        margin-top: 50px;
+        margin-top: 50;
     }
     .copyright{
-        margin: 10px 0px 20px;
+        margin: 10 0 20;
     }
     .social-area > *{
         margin: 0 15px;

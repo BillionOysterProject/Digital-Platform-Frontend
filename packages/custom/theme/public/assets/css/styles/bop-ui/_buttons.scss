@@ -91,7 +91,7 @@
     @include btn-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $border-radius-small);
 }
 .btn-wd {
-    min-width: 140px;
+    min-width: 140;
 }
 
 .btn-group.select{

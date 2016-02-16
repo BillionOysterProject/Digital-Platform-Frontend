@@ -5,8 +5,8 @@
 .nbs-flexisel-ul {
     position:relative;
     width:9999px;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     list-style-type:none;   
     text-align:center;  
 }
@@ -19,18 +19,18 @@
 
 .nbs-flexisel-item {
     float:left;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     cursor:pointer;
     position:relative;
-    line-height:0px;
+    line-height:0;
 }
 .nbs-flexisel-item img {
     width: 100%;
     cursor: pointer;
     position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10;
+    margin-bottom: 10;
 
 }
 
