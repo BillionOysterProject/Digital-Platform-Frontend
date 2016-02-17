@@ -1,9 +1,9 @@
 <div ng-controller="LessonController">
+  {{sendModel}}
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <form ng-submit="onSubmit">
-
           <!-- panel 1-->
           <div class="panel panel-default" ng-if="lessonConfig[0].blockTitle === 'Lesson Upload'">
             <div class="panel-heading">
@@ -11,16 +11,22 @@
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="{{lessonConfig[0].blockItems.title.colClass}}">
+                <!-- <div class="col-md-8">
                   <div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid }">
                     <label for="lessontitle">{{lessonConfig[0].blockItems.title.label}}</label>
                     <div class="row">
-                      <div class="col-md-12" ng-class="{'has-error': sendModel.lessonUpload.title == undefined || sendModel.lessonUpload.title == ''}">
-                        <input type="{{lessonConfig[0].blockItems.title.type}} " class="form-control " id="lessontitle " placeholder="Lesson Title " ng-model="sendModel.lessonUpload.title ">
+                      <div class="col-md-12">
+                        <input type="text" class="form-control " id="lessontitle " placeholder="Lesson Title " ng-model="sendModel.lessonUpload.title ">
                       </div>
                     </div>
                   </div>
+                </div> -->
+                <div ng-model="sendModel.lessonUpload.title">
+                  <text-input outModel="sendModel.lessonUpload.title"></text-input>
                 </div>
+                <!-- <textInput model="sendModel.lessonUpload.title"></textInput> -->
+                <!-- <div textInput model="sendModel.lessonUpload.title"></div> -->
+                <!-- <div text-input model="sendModel.lessonUpload.title"></div> -->
                 <div class="{{lessonConfig[0].blockItems.unit.colClass}} ">
                   <div class="form-group ">
                     <label for="{{lessonConfig[0].blockItems.unit.label}} ">{{lessonConfig[0].blockItems.unit.label}}</label>
