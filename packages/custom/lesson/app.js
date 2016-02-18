@@ -18,6 +18,7 @@ Lesson.register(function (app, auth, database, circles, forms) {
 
     Lesson.aggregateAsset('css', 'lesson.css');
 
+    //TODO remove once components all done
     Lesson.angularDependencies(['ngDropzone', 'ui.tinymce']);
 
     //We are adding a link to the main menu for all authenticated users

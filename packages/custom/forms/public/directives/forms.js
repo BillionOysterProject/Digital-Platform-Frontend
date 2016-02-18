@@ -1,27 +1,72 @@
 (function() {
   'use strict';
 
-  angular.module('mean.forms')
-    .directive('textInput', function($compile){
+  /* jshint -W098 */
+  angular
+    .module('mean.forms')
+    .directive('textInput', function() {
       return {
         restrict: 'AE',
+        template: '<div class="{{outerColumn}}">' +
+          '<div class="form-group">' +
+          '<label for="{{inTitle}}">{{inTitle}}</label>' +
+          '<div class="row">' +
+          '<div class="col-md-12">' +
+          '<input type="text" class="form-control " id="lessontitle " placeholder="Lesson Title" ng-model="outModel">' +
+          '</div>' +
+          '</div>' +
+          '</div>' +
+          '</div>',
         scope: {
-          outModel: '='
+          outModel: '=ngModel',
+          inTitle: '@',
+          outerColumn: '@'
         },
-        template: '<div class="col-md-8">' +
-            '<div class="form-group">' +
-            '<label for="lessontitle">Lesson Title</label>' +
-            '<div class="row">' +
-            '<div class="col-md-12">' +
-            '<input type="text" class="form-control " id="lessontitle " placeholder="Lesson Title" ng-model="model">' +
-            '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>',
-        replace: true,
-        link: function($scope, elem, attr, ctrl){
-          console.debug($scope)
-        }
-      }
-  });
+        require: 'ngModel',
+        replace: true
+      };
+    });
+
+  angular
+    .module('mean.forms')
+    .directive('dropDown', function() {
+      return {
+        restrict: 'AE',
+        template: '<div class="{{outerColumn}}">' +
+          '<div class="form-group">' +
+          '<label for="{{inTitle}}">{{inTitle}}</label>' +
+          '<select class="form-control " ng-model="outModel" selected="selected ">' +
+          '<option ng-repeat="item in inSelectableArray ">{{item}}</option>' +
+          '</select>' +
+          '</div>' +
+          '</div>',
+        scope: {
+          outModel: '=ngModel',
+          inSelectableArray: '=',
+          inTitle: '@',
+          outerColumn: '@'
+        },
+        require: 'ngModel',
+        replace: true
+      };
+    });
+
+  angular
+    .module('mean.forms')
+    .directive('textArea', function() {
+      return {
+        restrict: 'AE',
+        template: '<div class="{{outerColumn}}">' +
+          '<label for="{{linTitle}}">{{inTitle}}</label>' +
+          '<textarea ui-tinymce ng-model="outModel"></textarea>' +
+          '</div>',
+        scope: {
+          outModel: '=ngModel',
+          inTitle: '@',
+          outerColumn: '@'
+        },
+        require: 'ngModel',
+        replace: true
+      };
+    });
 })();

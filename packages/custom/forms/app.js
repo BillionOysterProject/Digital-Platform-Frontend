@@ -24,6 +24,8 @@ Forms.register(function(app, auth, database) {
   //   menu: 'main'
   // });
 
+  Forms.angularDependencies(['ngDropzone', 'ui.tinymce']);
+
   Forms.aggregateAsset('css', 'forms.css');
 
   /**
