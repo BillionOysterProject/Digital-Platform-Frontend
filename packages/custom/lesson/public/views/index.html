@@ -3,7 +3,6 @@
     <div class="row">
       <div class="col-md-12">
         <form ng-submit="onSubmit">
-
           <!-- panel 1-->
           <div class="panel panel-default" ng-if="lessonConfig[0].blockTitle === 'Lesson Upload'">
             <div class="panel-heading">
@@ -11,24 +10,8 @@
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="{{lessonConfig[0].blockItems.title.colClass}}">
-                  <div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid }">
-                    <label for="lessontitle">{{lessonConfig[0].blockItems.title.label}}</label>
-                    <div class="row">
-                      <div class="col-md-12" ng-class="{'has-error': sendModel.lessonUpload.title == undefined || sendModel.lessonUpload.title == ''}">
-                        <input type="{{lessonConfig[0].blockItems.title.type}} " class="form-control " id="lessontitle " placeholder="Lesson Title " ng-model="sendModel.lessonUpload.title ">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="{{lessonConfig[0].blockItems.unit.colClass}} ">
-                  <div class="form-group ">
-                    <label for="{{lessonConfig[0].blockItems.unit.label}} ">{{lessonConfig[0].blockItems.unit.label}}</label>
-                    <select class="form-control " ng-model="sendModel.lessonUpload.unit " selected="selected ">
-                      <option ng-repeat="item in lessonConfig[0].blockItems.unit.options ">{{item}}</option>
-                    </select>
-                  </div>
-                </div>
+                <text-input outer-column="col-md-8" in-title="{{lessonConfig[0].blockItems.title.label}}" ng-model="sendModel.lessonUpload.title"></text-input>
+                <drop-down outer-column="col-md-4" in-title="{{lessonConfig[0].blockItems.unit.label}}" ng-model="sendModel.lessonUpload.unit" in-selectable-array="lessonConfig[0].blockItems.unit.options"></drop-down>
               </div>
             </div>
           </div>
@@ -52,41 +35,16 @@
               <div class="row ">
                 <div class="col-md-6 ">
                   <div class="row ">
-                    <div class="col-md-4 ">
-                      <div class="form-group ">
-                        <label for="{{lessonConfig[1].blockItems.grade.label}} ">{{lessonConfig[1].blockItems.grade.label}}</label>
-                        <select class="form-control " ng-model="sendModel.lessonOverview.grade ">
-                          <option ng-repeat="item in lessonConfig[1].blockItems.grade.options ">{{item}}</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-4 ">
-                      <div class="form-group ">
-                        <label for="{{lessonConfig[1].blockItems.classPeriod.label}} ">{{lessonConfig[1].blockItems.classPeriod.label}}</label>
-                        <select class="form-control " ng-model="sendModel.lessonOverview.classPeriods ">
-                          <option ng-repeat="item in lessonConfig[1].blockItems.classPeriod.options ">{{item}}</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-4 ">
-                      <div class="form-group ">
-                        <label for="{{lessonConfig[1].blockItems.setting.label}} ">{{lessonConfig[1].blockItems.setting.label}}</label>
-                        <select class="form-control " ng-model="sendModel.lessonOverview.setting ">
-                          <option ng-repeat="item in lessonConfig[1].blockItems.setting.options ">{{item}}</option>
-                        </select>
-                      </div>
-                    </div>
+                    <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.grade.label}}" ng-model="sendModel.lessonOverview.grade" in-selectable-array="lessonConfig[1].blockItems.grade.options"></drop-down>
+                    <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.classPeriod.label}}" ng-model="sendModel.lessonOverview.classPeriods" in-selectable-array="lessonConfig[1].blockItems.classPeriod.options"></drop-down>
+                    <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.setting.label}}" ng-model="sendModel.lessonOverview.setting" in-selectable-array="lessonConfig[1].blockItems.setting.options"></drop-down>
                   </div>
                   <div class="row ">
-                    <div class="col-md-12 ">
-                      <div class="form-group ">
-                        <label for="{{lessonConfig[1].blockItems.protocolConnections.label}} ">{{lessonConfig[1].blockItems.protocolConnections.label}}</label>
-                        <input type="text " class="form-control " id="lessontitle " placeholder="Protocol Connections " ng-model="sendModel.lessonOverview.protocolConnections ">
-                      </div>
-                    </div>
+                    <text-input outer-column="col-md-12" in-title="{{lessonConfig[0].blockItems.protocolConnections.label}}" ng-model="sendModel.lessonOverview.protocolConnections"></text-input>
                   </div>
                 </div>
                 <div class="col-md-6 ">
+                  <!-- TODO add select2 directive-->
                   <div class="col-md-12 ">
                     <div class="form-group ">
                       <label for="{{lessonConfig[1].blockItems.subjectAreas.label}}">{{lessonConfig[1].blockItems.subjectAreas.label}}
@@ -97,13 +55,11 @@
                       </div>
                     </div>
                   </div>
+                  <!-- end TODO add select2 directive-->
                 </div>
               </div>
               <div class="row ">
-                <div class="col-md-12 ">
-                  <label for="{{lessonConfig[1].blockItems.lessonSummary.label}}">{{lessonConfig[1].blockItems.lessonSummary.label}}</label>
-                  <textarea ui-tinymce ng-model="sendModel.lessonOverview.lessonSummary"></textarea>
-                </div>
+                <text-area outer-column="col-md-12" in-title="{{lessonConfig[1].blockItems.lessonSummary.label}}" ng-model="sendModel.lessonOverview.lessonSummary"></text-area>
               </div>
             </div>
           </div>
@@ -119,8 +75,7 @@
                   <div class="panel-controls ">
                     <ul>
                       <li>
-                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseLessonObject
-                                        " aria-expanded="false " aria-controls="collapseLessonObject ">
+                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseLessonObject" aria-expanded="false " aria-controls="collapseLessonObject ">
                           <i class="fa fa-chevron-down "></i></a>
                       </li>
                     </ul>
@@ -128,10 +83,11 @@
                 </div>
                 <div id="collapseLessonObject " class="panel-body collapse in ">
                   <div class="row ">
-                    <div class="col-md-12 ">
+                    <!-- <div class="col-md-12 ">
                       <label for="{{lessonConfig[2].blockItems.objectives.label}} ">{{lessonConfig[2].blockItems.objectives.label}}</label>
                       <textarea ui-tinymce ng-model="sendModel.lessonObjectives"></textarea>
-                    </div>
+                    </div> -->
+                    <text-area outer-column="col-md-12" in-title="{{lessonConfig[1].blockItems.objectives.label}}" ng-model="sendModel.lessonObjectives"></text-area>
                   </div>
                 </div>
               </div>
