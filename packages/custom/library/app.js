@@ -18,12 +18,12 @@ Library.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Library.menus.add({
-    title: 'library example page',
-    link: 'library example page',
+    title: 'Library',
+    link: 'library',
     roles: ['authenticated'],
     menu: 'main'
   });
-  
+
   Library.aggregateAsset('css', 'library.css');
 
   /**

@@ -9,8 +9,10 @@
       res.send('Anyone can access this');
     });
 
-    app.get('/api/library/example/auth', auth.requiresLogin, function (req, res, next) {
-      res.send('Only authenticated users can access this');
+    app.get('/api/library/all', auth.requiresLogin, function (req, res, next) {
+      // Library.all();
+      res.jsonp(req.user)
+      // res.send('Only authenticated users can access this');
     });
 
     app.get('/api/library/example/admin', auth.requiresAdmin, function (req, res, next) {
