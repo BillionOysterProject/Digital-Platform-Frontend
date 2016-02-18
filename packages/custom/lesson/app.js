@@ -11,13 +11,14 @@ var Lesson = new Module('lesson');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Lesson.register(function (app, auth, database, circles) {
+Lesson.register(function (app, auth, database, circles, forms) {
 
     //We enable routing. By default the Package Object is passed to the routes
     Lesson.routes(app, auth, database);
 
     Lesson.aggregateAsset('css', 'lesson.css');
 
+    //TODO remove once components all done
     Lesson.angularDependencies(['ngDropzone', 'ui.tinymce']);
 
     //We are adding a link to the main menu for all authenticated users
