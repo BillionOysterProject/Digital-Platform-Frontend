@@ -90,7 +90,7 @@
       'blockItems': {
         'grade': {
           'label': 'Grade',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-8',
           'type': 'select',
           'options': [
@@ -99,7 +99,7 @@
         },
         'classPeriod': {
           'label': 'Class Period',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-4',
           'type': 'select',
           'options': [
@@ -108,7 +108,7 @@
         },
         'setting': {
           'label': 'Setting',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-4',
           'type': 'select',
           'options': [
@@ -117,7 +117,7 @@
         },
         'subjectAreas': {
           'label': 'Subject Area(s)',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-4',
           'type': 'select',
           'options': [
@@ -133,13 +133,13 @@
         },
         'protocolConnections': {
           'label': 'Protocol Connections',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-4',
           'type': 'text'
         },
         'lessonSummary': {
           'label': 'Lesson Summary',
-          'required': false,
+          'required': true,
           'colClass': 'col-md-4',
           'type': 'text'
         }
@@ -149,7 +149,7 @@
       'blockItems': {
         'objectives': {
           'label': 'Objectives',
-          'required': false,
+          'required': true,
           'type': 'text'
         }
       }
@@ -158,12 +158,12 @@
       'blockItems': {
         'supplies': {
           'label': 'Supplies',
-          'required': false,
+          'required': true,
           'type': 'text'
         },
         'teacherResources': {
           'label': 'Teacher Resources',
-          'required': false,
+          'required': true,
           'type': 'text'
         },
         'handouts': {
@@ -178,69 +178,70 @@
         }
       }
     }, {
-        'blockTitle': 'Background',
-        'blockItems': {
-          'background': {
-            'label': 'Background',
-            'required': false,
-            'type': 'text'
-          }
+      'blockTitle': 'Background',
+      'blockItems': {
+        'background': {
+          'label': 'Background',
+          'required': false,
+          'type': 'text'
         }
-    },{
-        'blockTitle': 'Instruction Plan',
-          'blockItems': {
-            'engage': {
-              'label': 'Engage',
-              'required': false,
-              'type': 'text'
-            },
-            'explore': {
-              'label': 'Explore',
-              'required': false,
-              'type': 'text'
-            },
-            'explain': {
-              'label': 'Explain',
-              'required': false,
-              'type': 'text'
-            },
-            'elaborate': {
-              'label': 'Elaborate',
-              'required': false,
-              'type': 'text'
-            },
-            'evaluate': {
-              'label': 'Evaluate',
-              'required': false,
-              'type': 'text'
-            }
-          }
-    },{
-            'blockTitle': 'Standards',
-            'blockItems': {
-              'nycScienceScopeSequence': {
-                'label': 'NEW YORK CITY SCIENCE SCOPE & SEQUENCE',
-                'required': false,
-                'type': 'text'
-              },
-              'ngssStandards': {
-                'label': 'NGSS STANDARDS',
-                'required': false,
-                'type': 'text'
-              },
-              'commonCoreEla': {
-                'label': 'COMMON CORE ELA',
-                'required': false,
-                'type': 'text'
-              },
-              'commonCoreMath': {
-                'label': 'COMMON CORE MATH',
-                'required': false,
-                'type': 'text'
-              }
-            }
-          }
-    ];
+      }
+    }, {
+      'blockTitle': 'Instruction Plan',
+      'partialRequire': 1,
+      'blockItems': {
+        'engage': {
+          'label': 'Engage',
+          'required': false,
+          'type': 'text'
+        },
+        'explore': {
+          'label': 'Explore',
+          'required': false,
+          'type': 'text'
+        },
+        'explain': {
+          'label': 'Explain',
+          'required': false,
+          'type': 'text'
+        },
+        'elaborate': {
+          'label': 'Elaborate',
+          'required': false,
+          'type': 'text'
+        },
+        'evaluate': {
+          'label': 'Evaluate',
+          'required': false,
+          'type': 'text'
+        }
+      }
+    }, {
+      'blockTitle': 'Standards',
+      'partialRequire': 1, //TODO - Logic for error message if at least one of the blockItems is not set
+      'blockItems': {
+        'nycScienceScopeSequence': {
+          'label': 'NEW YORK CITY SCIENCE SCOPE & SEQUENCE',
+          'required': false,
+          'type': 'text'
+        },
+        'ngssStandards': {
+          'label': 'NGSS STANDARDS',
+          'required': false,
+          'type': 'text'
+        },
+        'commonCoreEla': {
+          'label': 'COMMON CORE ELA',
+          'required': false,
+          'type': 'text'
+        },
+        'commonCoreMath': {
+          'label': 'COMMON CORE MATH',
+          'required': false,
+          'type': 'text'
+        }
+      }
+    }];
     $scope.onSubmit = function() {
       console.log('here')
         // alert(JSON.stringify(vm.model), null, 2);

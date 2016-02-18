@@ -10,7 +10,54 @@ var mongoose = require('mongoose'),
 /**
  * Lesson Schema
  */
- //TODO > make handoutsFileInput, vocabulary, nycScienceScopeSequence, ngssStandards, commonCoreEla, commonCoreMath
+//TODO > make handoutsFileInput, vocabulary, nycScienceScopeSequence, ngssStandards, commonCoreEla, commonCoreMath
+var instructionPlans = {
+  engage: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  explore: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  explain: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  elaborate: {
+    type: String,
+    required: false,
+    trim: true
+  },
+  evaluate: {
+    type: String,
+    required: false,
+    trim: true
+  }
+};
+
+var standardsOptions = {
+  nycScienceScopeSequence: {
+    type: String,
+    required: false
+  },
+  ngssStandards: {
+    type: String,
+    required: false
+  },
+  commonCoreEla: {
+    type: String,
+    required: false
+  },
+  commonCoreMath: {
+    type: String,
+    required: false
+  }
+}
+
 var LessonSchema = new Schema({
   created: {
     type: Date,
@@ -31,49 +78,49 @@ var LessonSchema = new Schema({
   lessonOverview: {
     grade: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     classPeriods: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     setting: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     subjectAreas: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     protocolConnections: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     lessonSummary: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     }
   },
   lessonObjectives: {
     type: String,
-    required: false,
+    required: true,
     trim: true
   },
   materialsResources: {
     supplies: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     teacherResources: {
       type: String,
-      required: false,
+      required: true,
       trim: true
     },
     handoutsFileInput: {
@@ -91,49 +138,12 @@ var LessonSchema = new Schema({
     trim: true
   },
   instructionPlan: {
-    engage: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    teacherResources: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    explain: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    elaborate: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    evaluate: {
-      type: String,
-      required: false,
-      trim: true
-    }
+    type: instructionPlans,
+    validate: instructionPlanValidator
   },
   standards: {
-    nycScienceScopeSequence: {
-      type: String,
-      required: false
-    },
-    ngssStandards: {
-      type: String,
-      required: false
-    },
-    commonCoreEla: {
-      type: String,
-      required: false
-    },
-    commonCoreMath: {
-      type: String,
-      required: false
-    }
+    type: standardsOptions,
+    validate: standardsValidator
   },
   user: {
     type: Schema.ObjectId,
@@ -158,6 +168,22 @@ LessonSchema.path('lessonUpload.title').validate(function(title) {
 LessonSchema.path('lessonUpload.unit').validate(function(unit) {
   return !!unit;
 }, 'Unit cannot be blank');
+
+function instructionPlanValidator(value) {
+  if (value.engage || value.explore || value.explain || value.elaborate || value.evaluate) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function standardsValidator(value) {
+  if (value.nycScienceScopeSequence || value.ngssStandards || value.commonCoreEla || value.commonCoreMath) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  * Statics
