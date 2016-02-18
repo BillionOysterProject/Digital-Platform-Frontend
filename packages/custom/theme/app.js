@@ -25,7 +25,8 @@ Theme.register(function(app, auth, database) {
 //  });
 
   Theme.aggregateAsset('css', 'loginForms.css');
-  Theme.aggregateAsset('css', 'theme.css');
+//  Theme.aggregateAsset('css', 'theme.css');
+  Theme.aggregateAsset('css', 'bop-main.css', {global:true});
   Theme.aggregateAsset('css', 'bop-style.css', {global:true});
   Theme.angularDependencies(['mean.system']);
 
