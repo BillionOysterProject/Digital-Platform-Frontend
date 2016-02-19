@@ -18,7 +18,8 @@ var deferred = require('q').defer();
 
 if ((cluster.isMaster) &&
   (process.execArgv.indexOf('--debug') < 0) &&
-  (process.env.NODE_ENV!=='test') && (process.env.NODE_ENV!=='development') &&
+  (process.env.NODE_ENV!=='test') && (process.env.NODE_ENV!=='development') && 
+  (process.env.NODE_ENV!=='development-local') && (process.env.NODE_ENV!=='staging') &&
   (process.execArgv.indexOf('--singleProcess')<0)) {
 //if (cluster.isMaster) {
 
