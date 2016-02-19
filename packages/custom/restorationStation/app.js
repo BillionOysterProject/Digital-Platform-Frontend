@@ -18,12 +18,12 @@ RestorationStation.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   RestorationStation.menus.add({
-    title: 'restorationStation example page',
-    link: 'restorationStation example page',
+    title: 'Restoration Station',
+    link: 'restorationStation',
     roles: ['authenticated'],
     menu: 'main'
   });
-  
+
   RestorationStation.aggregateAsset('css', 'restorationStation.css');
 
   /**
