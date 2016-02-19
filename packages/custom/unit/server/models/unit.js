@@ -10,6 +10,8 @@ var mongoose = require('mongoose'),
 /**
  * Unit Schema
  */
+
+ //TODO - numberExpectation as array
 var UnitSchema = new Schema({
     created: {
         type: Date,
@@ -26,53 +28,52 @@ var UnitSchema = new Schema({
         desiredResults: {
             fieldWork: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             scienceContent: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             }
         },
         essentialQuestons: [{
             question: {
-                type: String,
-                required: true,
-                trim: true
+                type: Array,
+                required: false
             }
         }],
         acquisition: {
             scienceContentSkills: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             mathContentSkills: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             fieldContentSkills: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             }
         },
         lessons: {
             scienceLessons: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             mathLessons: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             fieldLessons: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             }
         }
@@ -80,34 +81,34 @@ var UnitSchema = new Schema({
     stage2: {
         stage2Evidence: {
             numberExpectation: {
-                type: Array,
+                type: String,
                 required: false
             },
             scienceAndEngineering: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             disciplinaryCoreIdeas: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             crossCuttingConcepts: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             }
         },
         assessmentEvidence: {
             researchProject: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             },
             extensions: {
                 type: String,
-                required: true,
+                required: false,
                 trim: true
             }
         }

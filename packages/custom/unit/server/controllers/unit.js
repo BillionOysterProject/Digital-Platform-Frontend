@@ -31,7 +31,7 @@ module.exports = function(Units) {
             var unit = new Unit(req.body);
             unit.user = req.user;
             console.log(req.body);
-            Unit.save(function(err) {
+            unit.save(function(err) {
                 if (err) {
                     console.log(err)
                     return res.status(500).json({
@@ -39,7 +39,7 @@ module.exports = function(Units) {
                     });
                 }
 
-                Unit.events.publish({
+                Units.events.publish({
                     action: 'created',
                     user: {
                         name: req.user.name
