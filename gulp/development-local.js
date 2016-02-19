@@ -14,10 +14,10 @@ var gulp = require('gulp'),
 
 /*var defaultTasks = ['clean', 'jshint', 'less', 'csslint', 'devServe', 'watch'];*/
 // var defaultTasks = ['coffee','clean', 'less', 'sass', 'csslint', 'devServe', 'watch'];
-var defaultTasks = ['clean', 'sass', 'csslint', 'devServe'];
+var defaultTasks = ['clean', 'sass', 'csslint', 'devLocServe', 'watch'];
 
-gulp.task('env:development', function () {
-  process.env.NODE_ENV = 'development';
+gulp.task('env:development-local', function () {
+  process.env.NODE_ENV = 'development-local';
 });
 
 gulp.task('jshint', function () {
@@ -47,12 +47,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./packages'));
 });
 
-gulp.task('devServe', ['env:development'], function () {
+gulp.task('devLocServe', ['env:development-local'], function () {
 
   plugins.nodemon({
     script: 'server.js',
     ext: 'html js',
-    env: { 'NODE_ENV': 'development' } ,
+    env: { 'NODE_ENV': 'development-local' } ,
     ignore: [
       'node_modules/',
       'bower_components/',
@@ -66,6 +66,14 @@ gulp.task('devServe', ['env:development'], function () {
     ],
     nodeArgs: ['--debug'],
     stdout: false
+  }).on('readable', function() {
+    this.stdout.on('data', function(chunk) {
+      if(/Mean app started/.test(chunk)) {
+        setTimeout(function() { plugins.livereload.reload(); }, 500);
+      }
+      process.stdout.write(chunk);
+    });
+    this.stderr.pipe(process.stderr);
   });
 });
 
@@ -74,6 +82,16 @@ gulp.task('devServe', ['env:development'], function () {
 //     .pipe(coffee({bare: true}).on('error', gutil.log))
 //     .pipe(gulp.dest('./packages'));
 // });
+
+gulp.task('watch', function () {
+  plugins.livereload.listen({interval:500});
+
+  // gulp.watch(paths.coffee,['coffee']);
+  gulp.watch(paths.js, ['jshint']);
+  gulp.watch(paths.css, ['csslint']).on('change', plugins.livereload.changed);
+  // gulp.watch(paths.less, ['less']);
+  gulp.watch(paths.sass, ['sass']);
+});
 
 function count(taskName, message) {
   var fileCount = 0;
@@ -89,4 +107,4 @@ function count(taskName, message) {
   return through(countFiles, endStream);
 }
 
-gulp.task('development', defaultTasks);
+gulp.task('development-local', defaultTasks);

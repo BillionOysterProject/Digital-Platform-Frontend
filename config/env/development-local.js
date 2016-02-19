@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://fearless.tech:tech.fearless@ds039195.mongolab.com:39195/bop-dev',
+  db: 'mongodb://localhost/bop-dev',
   debug: true,
   logging: {
     format: 'tiny'
@@ -13,7 +13,7 @@ module.exports = {
   },
   hostname: 'http://localhost:8081',
   app: {
-    name: 'DEV - BOP'
+    name: 'DEV Local - BOP'
   },
   strategies: {
     local: {
