@@ -3,10 +3,18 @@
  * ----------
  */
 
+/* Add this to the main BOP style page it stops the content from flying down */
+ .content {
+   margin-top: 0px;
+ }
+
  /* Added sidebar nav position -need to transer this to the main template*/
- .sidebar{padding-bottom: 10pxmargin-top: 10px;
-	margin-top: 65px;
-	padding-top: 10px;
+ .sidebar{
+   padding: 10px 0px;
+   /* change this back once the nave works correctly */
+   /* margin-top: 65px; */
+   margin-top: 145px;
+
 }
 /* image center */
 .img-center {
@@ -18,7 +26,7 @@
   background-color: #fff;
 }
 .skin-blue .main-header .navbar .nav > li > a {
-  color: #ffffff;
+  color: #333;
 }
 .skin-blue .main-header .navbar .nav > li > a:hover,
 .skin-blue .main-header .navbar .nav > li > a:active,
@@ -27,8 +35,8 @@
 .skin-blue .main-header .navbar .nav .open > a:hover,
 .skin-blue .main-header .navbar .nav .open > a:focus,
 .skin-blue .main-header .navbar .nav > .active > a {
-  background: rgba(0, 0, 0, 0.1);
-  color: #f6f6f6;
+  background: #426CA9;
+  color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle {
   color: #ffffff;
@@ -154,4 +162,25 @@
 }
 .skin-blue.layout-top-nav .main-header > .logo:hover {
   background-color: #3b8ab8;
+}
+
+/* Section Headers */
+
+#section-header {
+  padding-bottom: 0;
+  margin-bottom: 33px;
+  color: #fff;
+}
+#section-header ul {
+  float: left;
+  list-style: none;
+  padding: 0px;
+}
+#section-header li {
+  float: left;
+  padding-right: 25px
+}
+.userProfile {
+  background-color: #282828;
+
 }
