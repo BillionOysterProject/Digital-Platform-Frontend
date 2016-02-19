@@ -1,73 +1,100 @@
-<div class="container" data-ng-controller="ProfileController">
-          <!-- Your Page Content Here -->
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">Students</h3>
+<div class="" data-ng-controller="ProfileController">
+<!-- Main content -->
+  <section id="section-header" class="userProfile">
+    <div class="container">
+      <div class="box-body box-profile pull-left">
+        <div class="userProfile-details">
+          <img class="profile-user-img img-responsive img-circle pull-left" src="system/assets/img/sam.jpg" alt="User profile picture">
+          <h3 class="profile-username">Sam Janis</h3>
+          <p class="text-muted">West New York Middle School</p>
+        </div><!-- /.box-body -->
 
-                </div><!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
-                  <table class="table table-hover">
-                    <tr>
-                      <th><input type="checkbox">
-                      </th>
-                      <th>Student Name</th>
-                      <th>Grade</th>
-                      <th>Gender</th>
-                      <th>Period</th>
-                      <th>Team</th>
-                      <th>Actions</th>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>John Doe</td>
-                      <td>Male</td>
-                      <td>7th</td>
-                      <td>2nd</td>
-                      <td>Krabby Patties</td>
-                      <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>Alexander Pierce</td>
-                      <td>Male</td>
-                      <td>7th</td>
-                      <td>2nd</td>
-                      <td>Krabby Patties</td>
-                      <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>Bob Doe</td>
-                      <td>Male</td>
-                      <td>7th</td>
-                      <td>2nd</td>
-                      <td>Krabby Patties</td>
-                      <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>Mike Doe</td>
-                      <td>Male</td>
-                      <td>7th</td>
-                      <td>2nd</td>
-                      <td>Krabby Patties</td>
-                      <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
-                    </tr>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td>Karen Allen</td>
-                      <td>Female</td>
-                      <td>7th</td>
-                      <td>2nd</td>
-                      <td>Krabby Patties</td>
-                      <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
-                    </tr>
+        <div class="section-nav pull-left">
+          <ul class="profile-nav">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/profile/password">Password</a></li>
+            <li><a href="/profile/notifications">Email Notifications</a></li>
+            <li><a href="/profile/students">Students</a></li>
+          </ul>
+          </div>
+      </div>
+    </div>
+ </section>
+ <div class="content">
+ <div class="container">
+  <!-- Your Page Content Here -->
+  <div class="container" data-ng-controller="ProfileController">
+            <!-- Your Page Content Here -->
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Students</h3>
 
-                  </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
+                  </div><!-- /.box-header -->
+                  <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                      <tr>
+                        <th><input type="checkbox">
+                        </th>
+                        <th>Student Name</th>
+                        <th>Grade</th>
+                        <th>Gender</th>
+                        <th>Period</th>
+                        <th>Team</th>
+                        <th>Actions</th>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>John Doe</td>
+                        <td>Male</td>
+                        <td>7th</td>
+                        <td>2nd</td>
+                        <td>Krabby Patties</td>
+                        <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Alexander Pierce</td>
+                        <td>Male</td>
+                        <td>7th</td>
+                        <td>2nd</td>
+                        <td>Krabby Patties</td>
+                        <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Bob Doe</td>
+                        <td>Male</td>
+                        <td>7th</td>
+                        <td>2nd</td>
+                        <td>Krabby Patties</td>
+                        <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Mike Doe</td>
+                        <td>Male</td>
+                        <td>7th</td>
+                        <td>2nd</td>
+                        <td>Krabby Patties</td>
+                        <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Karen Allen</td>
+                        <td>Female</td>
+                        <td>7th</td>
+                        <td>2nd</td>
+                        <td>Krabby Patties</td>
+                        <td><a href="">Edit</a> | <a href="">Remove</a></span></td>
+                      </tr>
+
+                    </table>
+                  </div><!-- /.box-body -->
+                </div><!-- /.box -->
+              </div>
             </div>
-          </div>
-          </div>
+            </div>
+    </div>
+  </div>

@@ -8,9 +8,14 @@
   restorationStation.$inject = ['$stateProvider'];
 
   function restorationStation($stateProvider) {
-    $stateProvider.state('restorationStation example page', {
-      url: '/restorationStation/example',
+    $stateProvider
+    .state('restorationStation', {
+      url: '/restorationStation',
       templateUrl: 'restorationStation/views/index.html'
+    })
+    .state('Oyster Restoration View', {
+      url: '/restorationStation/ors',
+      templateUrl: 'restorationStation/views/ors.html'
     });
   }
 
