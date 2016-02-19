@@ -11,7 +11,7 @@ var Unit = new Module('unit');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Unit.register(function(app, auth, database) {
+Unit.register(function(app, auth, database, forms) {
 
   //We enable routing. By default the Package Object is passed to the routes
   Unit.routes(app, auth, database);
