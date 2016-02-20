@@ -11,11 +11,7 @@
     return {
       addLesson: function(data) {
         let deferred = $q.defer();
-        // let libraryEntryJson = {
-        //     'listing': {
-        //         'id': String(widgetId)
-        //     }
-        // };
+
         console.log('hello!')
         $http({
           method: 'POST',

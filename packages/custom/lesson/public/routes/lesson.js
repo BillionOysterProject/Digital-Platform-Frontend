@@ -5,15 +5,16 @@
     .module('mean.lesson')
     .config(lesson);
 
-  lesson.$inject = ['$stateProvider'];
+  lesson.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function lesson($stateProvider) {
-    $stateProvider.state('lesson', {
+  function lesson($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
+    .state('lesson', {
       url: '/lesson',
       templateUrl: 'lesson/views/index.html',
       requiredCircles: {
-        circles: ['authenticated'],
-        denyState: 'auth.login'
+        circles: ['team-manager']
       }
     });
   }

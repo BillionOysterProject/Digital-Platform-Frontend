@@ -132,13 +132,14 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
     };
 
     MeanUserKlass.prototype.register = function(user) {
+      //TODO - investigateI manually overrode role: user.userrole with user.roles
       $http.post('/api/register', {
         email: user.email,
         password: user.password,
         confirmPassword: user.confirmPassword,
         username: user.username,
         name: user.name,
-        role: user.userrole
+        role: user.roles
       })
         .success(this.onIdentity.bind(this))
         .error(this.onIdFail.bind(this));

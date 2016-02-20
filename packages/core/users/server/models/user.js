@@ -41,7 +41,7 @@ var escapeProperty = function(value) {
 /**
  * User Schema
  */
-
+//TODO - removed this  // default: ['authenticated', 'anonymous'] // from roles
 var UserSchema = new Schema({
   name: {
     type: String,
@@ -64,7 +64,7 @@ var UserSchema = new Schema({
   },
   roles: {
     type: Array,
-    default: ['authenticated', 'anonymous']
+    default: ['authenticated', 'anonymous', 'team-member', 'team-manager']
   },
   hashed_password: {
     type: String,

@@ -8,7 +8,7 @@
   library.$inject = ['$stateProvider'];
 
   function library($stateProvider) {
-    $stateProvider.state('library example page', {
+    $stateProvider.state('library', {
       url: '/library/example',
       templateUrl: 'library/views/index.html'
     });

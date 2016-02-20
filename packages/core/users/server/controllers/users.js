@@ -84,7 +84,6 @@ module.exports = function(MeanUser) {
          */
         create: function(req, res, next) {
             var user = new User(req.body);
-            console.log(user);
             user.provider = 'local';
 
             // because we set our user.provider to local our models/user.js validation will always be true
@@ -99,8 +98,8 @@ module.exports = function(MeanUser) {
                 return res.status(400).send(errors);
             }
 
-            // Hard coded for now. Will address this with the user permissions system in v0.3.5
-            user.roles = ['authenticated'];
+            // TODO -Hard coded for now. Will address this with the user permissions system in v0.3.5
+            user.roles = ['authenticated', String(req.body.role)];
             user.save(function(err) {
                 if (err) {
                     switch (err.code) {

@@ -54,13 +54,19 @@ angular.module('mean.users')
 
       vm.user = {};
 
-      vm.user.roles = [
+      vm.userroles = [
         {
-          "role": "student"
+          "role": "team-member"
         }, {
-          "role": "teacher"
+          "role": "team-manager"
         }
       ];
+
+      vm.pushRole = function(role){
+        vm.user.roles = [role];
+        // vm.user.roles.push(role);
+      }
+
       vm.registerForm = MeanUser.registerForm = true;
 
       vm.input = {

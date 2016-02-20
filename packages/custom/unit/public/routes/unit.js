@@ -12,7 +12,7 @@
       url: '/unit',
       templateUrl: 'unit/views/index.html',
       requiredCircles: {
-        circles: ['authenticated'],
+        circles: ['team-member'],
         denyState: 'auth.login'
       }
     });
