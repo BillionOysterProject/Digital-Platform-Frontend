@@ -20,7 +20,8 @@
     "ngQuill": "ng-quill#^1.4.0",
     "angular-ui-tinymce": "^0.0.13",
     "ng-clip": "latest",
-    "ng-i18next": "~0.4.2"
+    "ng-i18next": "~0.4.2",
+    "font-awesome": "fontawesome#^4.5.0"
   },
   "resolutions": {
     "angular": "^1.5"
