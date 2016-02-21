@@ -1,4 +1,5 @@
 # Billion Oyster Project
+#
 
 This project is based off the MEAN.io stack.
 
@@ -11,7 +12,7 @@ This project is based off the MEAN.io stack.
 ## Getting Started
 Install gulp and bower globally.
 ```
-$ npm install -g gulp
+$ npm install -g gulp-cli
 // and bower
 $ npm install -g bower
 ```
@@ -20,6 +21,7 @@ Once you have cloned down this project, run:
 ```
 cd Digital-Platform-Frontend
 npm install
+bower install
 gulp
 ```
 ## Credits

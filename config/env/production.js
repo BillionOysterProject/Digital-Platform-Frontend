@@ -26,7 +26,7 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'http://localhost:8081',
   app: {
     name: 'MEAN - A Modern Stack - Production'
   },
@@ -41,31 +41,31 @@ module.exports = {
     facebook: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/api/auth/facebook/callback',
+      callbackURL: 'http://localhost:8081/api/auth/facebook/callback',
       enabled: false
     },
     twitter: {
       clientID: 'CONSUMER_KEY',
       clientSecret: 'CONSUMER_SECRET',
-      callbackURL: 'http://localhost:3000/api/auth/twitter/callback',
+      callbackURL: 'http://localhost:8081/api/auth/twitter/callback',
       enabled: false
     },
     github: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/api/auth/github/callback',
+      callbackURL: 'http://localhost:8081/api/auth/github/callback',
       enabled: false
     },
     google: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/api/auth/google/callback',
+      callbackURL: 'http://localhost:8081/api/auth/google/callback',
       enabled: false
     },
     linkedin: {
       clientID: 'API_KEY',
       clientSecret: 'SECRET_KEY',
-      callbackURL: 'http://localhost:3000/api/auth/linkedin/callback',
+      callbackURL: 'http://localhost:8081/api/auth/linkedin/callback',
       enabled: false
     }
   },

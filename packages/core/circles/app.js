@@ -36,6 +36,8 @@ Circles.register(function(app, auth, database) {
   Circles.registerCircle('can edit content', ['admin']);
   Circles.registerCircle('can create content', ['admin']);
   Circles.registerCircle('authenticated');
+  Circles.registerCircle('student');
+  Circles.registerCircle('teacher');
   Circles.registerCircle('anonymous');
 
   return Circles;
