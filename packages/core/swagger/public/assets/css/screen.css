@@ -186,12 +186,12 @@
   line-height: 1.3em;
 }
 .swagger-section .swagger-ui-wrap ol {
-  margin: 0px 0 10px;
+  margin: 0 0 10px;
   padding: 0 0 0 18px;
   list-style-type: decimal;
 }
 .swagger-section .swagger-ui-wrap ol li {
-  padding: 5px 0px;
+  padding: 5px 0;
   font-size: 0.9em;
   color: #333333;
 }
@@ -303,7 +303,7 @@
 }
 .swagger-section .swagger-ui-wrap .markdown ol li,
 .swagger-section .swagger-ui-wrap .markdown ul li {
-  padding: 3px 0px;
+  padding: 3px 0;
   line-height: 1.4em;
   color: #333333;
 }
