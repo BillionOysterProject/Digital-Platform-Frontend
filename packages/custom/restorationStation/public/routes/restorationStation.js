@@ -16,6 +16,10 @@
     .state('Oyster Restoration View', {
       url: '/restorationStation/ors',
       templateUrl: 'restorationStation/views/ors.html'
+    })
+    .state('Register ORS', {
+      url: '/restorationStation/register',
+      templateUrl: 'restorationStation/views/registerORS.html'
     });
   }
 

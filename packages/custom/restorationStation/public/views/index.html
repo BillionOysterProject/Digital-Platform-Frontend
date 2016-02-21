@@ -1,8 +1,21 @@
+<div class="content">
 <div class="container-fluid" data-ng-controller="RestorationStationController">
   <!-- Main content -->
-<h2 class="page-header">{{package.name}}</h2>
-   <div class="">
-   <div class="">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="page-header">Oyster Restoration Station</h1>
+      </div>
+      <div class="col-md-6 orsDash">
+          <div class="ors-nav pull-right">
+            <ul class="ors_nav-list">
+              <li><a href="/restorationStation" class="btn btn-primary btn-block"><b>Dashboard</b></a></li>
+              <!-- <li><a href="/restorationStation/ors" class="btn btn-primary btn-block"><b>View ORS</b></a></li> -->
+              <li><a href="/restorationStation/register" class="btn btn-default btn-block"><b>Register an ORS</b></a></li>
+              <li><a href="/restorationStation/register" class="btn btn-default btn-block"><b>Create a new ORS</b></a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
 
     <!-- Your Page Content Here -->
         <div class="row">
@@ -12,19 +25,34 @@
                 <h3 class="box-title">Map View</h3>
               </div>
               <!-- /.box-header -->
-              <div class="box-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Etiam vel tortor malesuada, maximus odio vehicula, condimentum ipsum.
-                  Maecenas eu tristique mi, dignissim rutrum nulla. Sed tincidunt,
-                  sapien blandit mollis varius, nibh risus ultrices erat, et laoreet enim risus viverra odio.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Etiam vel tortor malesuada, maximus odio vehicula, condimentum ipsum.
-                    Maecenas eu tristique mi, dignissim rutrum nulla. Sed tincidunt,
-                    sapien blandit mollis varius, nibh risus ultrices erat, et laoreet enim risus viverra odio.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Etiam vel tortor malesuada, maximus odio vehicula, condimentum ipsum.
-                      Maecenas eu tristique mi, dignissim rutrum nulla. Sed tincidunt,
-                      sapien blandit mollis varius, nibh risus ultrices erat, et laoreet enim risus viverra odio.</p>
+              <div class="box-body no-padding">
+                <a href="/restorationStation/ors">
+                <div class="col-md-9 col-sm-8">
+                  <img class="col-md-12" src="system/assets/img/harbor-map.png"  alt="Map">
+                </div>
+                      <div class="col-md-3 col-sm-4">
+                          <div class="pad box-pane-right bg-aqua" style="min-height: 280px">
+                            <div class="description-block margin-bottom">
+                              <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                              <h5 class="description-header">201 57th St, West New York, NJ 07093</h5>
+                              <span class="description-text">Site Location</span>
+                            </div>
+                            <!-- /.description-block -->
+                            <div class="description-block margin-bottom">
+                              <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                              <h5 class="description-header">June 14,2016</h5>
+                              <span class="description-text">Date Installed</span>
+                            </div>
+                            <!-- /.description-block -->
+                            <div class="description-block">
+                              <div class="sparkbar pad" data-color="#fff"><canvas width="34" height="30" style="display: inline-block; width: 34px; height: 30px; vertical-align: top;"></canvas></div>
+                              <h5 class="description-header"><span class="label label-success">Active</span></h5>
+                              <span class="description-text">Status</span>
+                            </div>
+                            <!-- /.description-block -->
+                          </div>
+                        </div>
+                      </a>
               </div>
               <!-- /.box-body -->
             </div>
@@ -33,13 +61,17 @@
             <div class="box box-solid">
               <div class="box-header with-border">
                 <h3 class="box-title">List View</h3>
+                <ul>
+                  <li>5 Sample Data</li>
+                  <li>45 Sample Data</li>
+                  <li>59% Sample Data</li>
+                  <li>23% Sample Data</li>
+                  <li>92% Sample Data</li>
+                </ul>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Etiam vel tortor malesuada, maximus odio vehicula, condimentum ipsum.
-                  Maecenas eu tristique mi, dignissim rutrum nulla. Sed tincidunt,
-                  sapien blandit mollis varius, nibh risus ultrices erat, et laoreet enim risus viverra odio.</p>
+
               </div>
               <!-- /.box-body -->
             </div>
@@ -92,13 +124,5 @@
             </div>
           </div><!-- /.col -->
         </div><!-- /.row -->
-      </div>
     </div>
-
-
-    <div class="section-nav pull-left">
-      <ul class="profile-nav">
-        <li><a href="/restorationStation">Dashboard</a></li>
-        <li><a href="/restorationStation/ors">View ORS</a></li>
-      </ul>
-      </div>
+</div>

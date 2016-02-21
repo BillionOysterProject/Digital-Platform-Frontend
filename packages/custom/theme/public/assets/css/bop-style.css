@@ -200,8 +200,14 @@
   padding: 20px 0px 20px 0px;
   text-align: center;
 }
-.student-nav li {
+.student_nav-list li {
   float: left;
   padding-right: 25px;
   list-style: none;
+}
+
+
+/* removes shadow/bold from labels */
+.label {
+  text-shadow: none;
 }
