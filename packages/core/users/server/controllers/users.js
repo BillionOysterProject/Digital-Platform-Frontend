@@ -38,7 +38,7 @@ module.exports = function(MeanUser) {
           var escaped = JSON.stringify(payload);
           escaped = encodeURI(escaped);
           // We are sending the payload inside the token
-          var token = jwt.sign(escaped, config.secret, { expiresInMinutes: 60*5 });
+          var token = jwt.sign(escaped, config.secret, { expiresIn: 60*60*5 });
           res.cookie('token', token);
           var destination = config.strategies.landingPage;
           if(!req.cookies.redirect)
@@ -84,6 +84,7 @@ module.exports = function(MeanUser) {
          */
         create: function(req, res, next) {
             var user = new User(req.body);
+            user.roles = [req.body.roles, 'authenticated'];
             console.log(user);
             user.provider = 'local';
 
@@ -99,8 +100,6 @@ module.exports = function(MeanUser) {
                 return res.status(400).send(errors);
             }
 
-            // Hard coded for now. Will address this with the user permissions system in v0.3.5
-            user.roles = ['authenticated'];
             user.save(function(err) {
                 if (err) {
                     switch (err.code) {
@@ -147,7 +146,7 @@ module.exports = function(MeanUser) {
                     });
 
                     // We are sending the payload inside the token
-                    var token = jwt.sign(escaped, config.secret, { expiresInMinutes: 60*5 });
+                    var token = jwt.sign(escaped, config.secret, { expiresIn: 60*60*5 });
                     res.json({
                       token: token,
                       redirect: config.strategies.landingPage
@@ -184,7 +183,7 @@ module.exports = function(MeanUser) {
                 var payload = user;
                 var escaped = JSON.stringify(payload);
                 escaped = encodeURI(escaped);
-                var token = jwt.sign(escaped, config.secret, { expiresInMinutes: 60*5 });
+                var token = jwt.sign(escaped, config.secret, { expiresIn: 60*60*5 });
                 res.json({ token: token });
 
             });

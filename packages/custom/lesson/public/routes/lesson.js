@@ -12,8 +12,7 @@
       url: '/lesson',
       templateUrl: 'lesson/views/index.html',
       requiredCircles: {
-        circles: ['authenticated'],
-        denyState: 'auth.login'
+        circles: ['teacher']
       }
     });
   }

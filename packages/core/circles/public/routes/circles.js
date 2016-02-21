@@ -6,7 +6,7 @@ angular.module('mean.circles').config(['$stateProvider',
       url: '/circles/manage',
       templateUrl: 'circles/views/index.html',
       requiredCircles: {
-        circles: ['admin']
+       circles: ['admin']
       }
     }).state('create circles', {
       url: '/circles/create',
@@ -18,9 +18,17 @@ angular.module('mean.circles').config(['$stateProvider',
   }
 ])
   .run(['$rootScope', '$state', '$http', 'MeanUser', '$meanConfig', '$cookies', '$location', function($rootScope, $state, $http, MeanUser, $meanConfig, $cookies, $location) {
-      $rootScope.$on('$stateChangeStart', function(e, toState) {
+      // $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
+      $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
+        console.log('state changed');
         var acl = MeanUser.acl;
+        console.log('acl');
+        console.log(acl);
         // If the route has a circle requirement on it validate it
+        console.log('fromState.requiredCircles');
+        console.log(fromState);
+        console.log(fromState.requiredCircles);
+
         if(toState.requiredCircles && angular.isArray(toState.requiredCircles.circles)) {
           for(var j = 0; j < toState.requiredCircles.circles.length; j++) {
             var requiredCircle = toState.requiredCircles.circles[j];
@@ -38,6 +46,10 @@ angular.module('mean.circles').config(['$stateProvider',
         }
 
         function checkCircle(acl, requiredCircle) {
+          console.log('acl');
+          console.log(acl);
+          console.log('requiredCircle');
+          console.log(requiredCircle);
           if(acl.allowed.indexOf(requiredCircle) === -1) {
             e.preventDefault();
             // Not Authenticated
@@ -49,6 +61,8 @@ angular.module('mean.circles').config(['$stateProvider',
             }
           }
         }
+      }, function(error) {
+        console.log('error');
       });
     }]
   );

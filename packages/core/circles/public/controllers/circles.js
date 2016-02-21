@@ -1,18 +1,21 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.circles').controller('CirclesController', ['$scope', 'Global', 'Circles',
-    function($scope, Global, Circles) {
+angular.module('mean.circles').controller('CirclesController', ['$scope', '$state', 'Global', 'Circles',
+    function($scope, $state, Global, Circles) {
         var vm = this;
 
         vm.global = Global;
         
 
         vm.availableCircles = [];
+
         Circles.all(function(acl) {
             for (var index in acl.circles) {
                 vm.availableCircles.push(index);
             }
+        }, function(error) {
+            $state.go('home');
         });
 
         vm.create = function(valid) {
