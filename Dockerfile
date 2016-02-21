@@ -15,10 +15,10 @@ RUN chown -R node:node /usr/src/app
 USER node
 RUN touch /home/node/.mean
 RUN npm install 
-ENV PORT 3000  
+ENV PORT 8081  
 ENV DB_PORT_27017_TCP_ADDR db
 CMD [ "npm", "start" ]
-EXPOSE 3000
+EXPOSE 8081
 
 
 #How to build:
@@ -29,4 +29,4 @@ EXPOSE 3000
 #How to run:
 # docker pull mongo
 # docker run -d --name db mongo
-# docker run -p 3000:3000 --link db:db mean
+# docker run -p 8081:8081 --link db:db mean

@@ -1,5 +1,8 @@
 {
-  "name": "lesson",
-  "version": "0.0.1",
-  "dependencies": {}
+    "name": "lesson",
+    "version": "0.0.1",
+    "dependencies": {
+        "angular-bootstrap": "latest",
+        "angular-animate": "latest"
+    }
 }

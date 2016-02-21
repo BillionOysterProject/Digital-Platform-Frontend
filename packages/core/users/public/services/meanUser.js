@@ -52,7 +52,7 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
       $http.get('/api/users/me').success(function(response) {
         if(!response && $cookies.get('token') && $cookies.get('redirect')) {
           self.onIdentity.bind(self)({
-            token: $cookies.get('token'), 
+            token: $cookies.get('token'),
             redirect: $cookies.get('redirect').replace(/^"|"$/g, '')
           });
           $cookies.remove('token');
@@ -84,7 +84,7 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
       if (angular.isDefined(response.token)) {
         localStorage.setItem('JWT', response.token);
         encodedUser = decodeURI(b64_to_utf8(response.token.split('.')[1]));
-        user = JSON.parse(encodedUser); 
+        user = JSON.parse(encodedUser);
       }
       destination = angular.isDefined(response.redirect) ? response.redirect : destination;
       $cookies.remove('redirect');
@@ -137,7 +137,8 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
         password: user.password,
         confirmPassword: user.confirmPassword,
         username: user.username,
-        name: user.name
+        name: user.name,
+        role: user.userrole
       })
         .success(this.onIdentity.bind(this))
         .error(this.onIdFail.bind(this));
