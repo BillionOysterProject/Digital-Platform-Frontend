@@ -3,7 +3,6 @@
     <div class="alert alert-danger animated fadeIn" ng-show="login.loginError">{{login.loginError}}</div>
 
     <h2>Login</h2>
-
     <form id="login_form" ng-submit="login.login()">
         <div class="input-wrapper">
             <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="login.user.email">
@@ -22,10 +21,11 @@
         <div class="forgot_password">
             <a ui-sref='forgot-password'>Forgot your password?</a>
         </div>
+        <br />
         <div class="button_login">
-            <button type="submit" class="submit_button">Login</button>
-            <p>Don't have an account?</p>
-            <a ui-sref='auth.register' >Sign up</a>
+            <button type="submit" class="submit_button btn btn-primary">Login</button>
+            <br />
+            <p>Don't have an account? <a ui-sref='auth.register' >Sign up</a></p>
         </div>
     </form>
 </div>

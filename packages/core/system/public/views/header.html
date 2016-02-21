@@ -1,70 +1,4 @@
-<!-- <nav class="main-header" data-role="navigation" ng-controller="HeaderController as hdrctr">
-  <div class="container-fluid">
-
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" ui-sref="home" mean-token="'site-title'">Billion Oyster Program</a>
-    </div>
-
-    <div id="navbar" class="navbar-collapse collapse" ng-class="!isCollapsed && 'in'">
-      <ul class="nav navbar-nav navbar-right">
-        <div class="collapse navbar-collapse" ng-class="!isCollapsed && 'in'">
-            <div class="right pull-right">
-                <div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">
-                    <div class="pull-right" mean-token-editable></div>
-                    <div class="pull-right" mean-translate></div>
-                </div>
-                <ul class="navbar-nav nav auth-link" ng-show="!hdrctr.hdrvars.authenticated">
-                    <li><a ui-sref='auth.register'>Join</a></li>
-                    <li class="divider-vertical"></li>
-                    <li><a ui-sref='auth.login'>Log In</a></li>
-                </ul>
-                <ul class="navbar-nav nav" ng-show="hdrctr.hdrvars.authenticated">
-                    <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
-                        <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                            <span>{{hdrctr.hdrvars.user.name}}</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" ng-click="hdrctr.logout()">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <li class="user-header">
-                  <img ng-src="assets/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                  <p>
-                    Sam Janis - BOP Staff
-                    <small>Member since Nov. 2012</small>
-                  </p>
-                </li>
-            </div>
-            <div class="left pull-right">
-                <ul class="navbar-nav nav">
-                    <li ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.main">
-                        <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </ul>
-    </div>
-  </div>
-</nav>
- -->
-
-
-
-
-
-
-
-
-
- <nav class="main-header" data-role="navigation" ng-controller="HeaderController as hdrctr">
+<nav class="main-header" data-role="navigation" ng-controller="HeaderController as hdrctr">
    <div class="container-fluid">
 
      <div class="navbar-header">
@@ -121,103 +55,12 @@
    </div>
  </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div ng-controller="HeaderController as hdrctr" ng-init="isCollapsed"> -->
-<header class="main-header" ng-controller="HeaderController as hdrctr">
-
-
-  <a href="index2.html" class="logo">
-    <span class="logo-mini"><b>BOP</b></span>
-    <span class="logo-lg ">
-      <img src="system/assets/img/bop-logo.svg" width="88px" class="img-responsive img-center" alt="Billion Oyster Project">
-    </span>
-  </a>
-
-  <nav class="navbar navbar-static-top" role="navigation">
-   <a class="sidebar-toggle" data-toggle="offcanvas" role="button" ng-click="isCollapsed = !isCollapsed">
-      <span class="sr-only">Toggle navigation</span>
-   </a>
-
-    <div class="navbar-custom-menu">
-      <!-- <ul class="nav navbar-nav"> -->
-        <div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">
-            <div class="pull-right" mean-token-editable></div>
-            <div class="pull-right" mean-translate></div>
-        </div>
-        <ul class="navbar-nav nav auth-link" ng-show="!hdrctr.hdrvars.authenticated">
-            <li><a ui-sref='auth.register'>Join</a></li>
-            <li class="divider-vertical"></li>
-            <li><a ui-sref='auth.login'>Log In</a></li>
-        </ul>
-        <ul class="navbar-nav nav" ng-show="hdrctr.hdrvars.authenticated">
-            <li class="dropdown user user-menu" uib-dropdown on-toggle="toggled(open)">
-                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                  <img src="system/assets/img/sam.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">{{hdrctr.hdrvars.user.name}}</span>
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li class="user-header">
-                    <img src="/system/assets/img/sam.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      Sam Janis - BOP Staff
-                      <small>Member since Nov. 2012</small>
-                    </p>
-                  </li>
-
-                  <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
-                  </li>
-
-                  <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    </div>
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                    </div>
-                  </li>
-                    <li><a href="#" ng-click="hdrctr.logout()">Log Out</a></li>
-                </ul>
-            </li>
-        </ul>
-
-
-        <!-- <li>
-          <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-        </li> -->
-      <!-- </ul> -->
-    </div>
-  </nav>
-</header>
-
-
-
-
-
-
-
-
  <aside class="main-sidebar">
-
+   <a href="index2.html" class="logo">
+     <span class="logo-lg ">
+       <img src="system/assets/img/bop-logo.svg" width="88px" class="img-responsive img-center" alt="Billion Oyster Project">
+     </span>
+   </a>
    <!-- sidebar: style can be found in sidebar.less -->
    <section class="sidebar">
      <!-- Sidebar Menu -->
@@ -232,99 +75,24 @@
      </ul>
 
      <ul class="sidebar-menu">
+      
 
        <!-- <li class="header">HEADER</li> -->
        <!-- Optionally, you can add icons to the links -->
-       <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Lesson</span></a></li>
-       <li><a href="#"><i class="fa fa-link"></i> <span>Library</span></a></li>
-       <li><a href="#"><i class="fa fa-link"></i> <span>Unit</span></a></li>
-       <li><a href="#"><i class="fa fa-link"></i> <span>Restoration Station</span></a></li>
-       <li class="treeview">
+       <li><a href="#" ui-sref="restorationStation"><i class="fa fa-link"></i> <span>Restoration Station</span></a></li>
+       <li><a href="#" ui-sref="profile"><i class="fa fa-link"></i> <span>Profile</span></a></li>
+       <li><a href="#" ui-sref="library example page"><i class="fa fa-link"></i> <span>library example page</span></a></li>
+       <li><a href="#" ui-sref="unit"><i class="fa fa-link"></i> <span>Unit</span></a></li>
+       <li><a href="#" ui-sref="lesson"><i class="fa fa-link"></i> <span>Lesson</span></a></li>
+       
+       <!--<li class="treeview">
          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
          <ul class="treeview-menu">
            <li><a href="#">Link in level 2</a></li>
            <li><a href="#">Link in level 2</a></li>
          </ul>
-       </li>
+       </li>-->
      </ul><!-- /.sidebar-menu -->
    </section>
    <!-- /.sidebar -->
  </aside>
-
-
-
-
-
-
-
-
-
-
-
-<!--
- <aside class="main-sidebar" ng-show="isCollapsed">
-
-
-   <section class="sidebar" >
-
-
-     <ul class="sidebar-menu">
-
-
-
-
-
-       <!-- This is the merged Nav section -->
-
-       <!-- <ul class="nav navbar-nav navbar-right">
-         <div class="collapse navbar-collapse" ng-class="!isCollapsed && 'in'">
-             <div class="right pull-right">
-                 <div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">
-                     <div class="pull-right" mean-token-editable></div>
-                     <div class="pull-right" mean-translate></div>
-                 </div>
-                 <ul class="navbar-nav nav auth-link" ng-show="!hdrctr.hdrvars.authenticated">
-                     <li><a ui-sref='auth.register'>Join</a></li>
-                     <li class="divider-vertical"></li>
-                     <li><a ui-sref='auth.login'>Log In</a></li>
-                 </ul>
-                 <ul class="navbar-nav nav" ng-show="hdrctr.hdrvars.authenticated">
-                     <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
-                         <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                             <span>{{hdrctr.hdrvars.user.name}}</span> <b class="caret"></b>
-                         </a>
-                         <ul class="dropdown-menu">
-                             <li><a href="#" ng-click="hdrctr.logout()">Log Out</a></li>
-                         </ul>
-                     </li>
-                 </ul>
-             </div>
-             <div class="left pull-right">
-                 <ul class="navbar-nav nav">
-                   <li class="active"><a href="lesson.html">Lesson</a></li>
-                   <li ><a href="unit.html">Unit</a></li> -->
-                    <!-- <li ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.main">
-                         <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-       </ul>
-       <!-- // merged Nav section -->
-
-
-
-       <!-- <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Lesson</span></a></li>
-       <li><a href="#"><i class="fa fa-link"></i> <span>Library</span></a></li>
-       <li><a href="#"><i class="fa fa-link"></i> <span>Unit</span></a></li>
-       <li class="treeview">
-         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-         <ul class="treeview-menu">
-           <li><a href="#">Link in level 2</a></li>
-           <li><a href="#">Link in level 2</a></li>
-         </ul>
-       </li>
-     </ul>
-   </section>
- </aside>
-</div> -->
