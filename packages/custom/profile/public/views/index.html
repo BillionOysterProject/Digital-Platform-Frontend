@@ -1,26 +1,24 @@
 <div class="" data-ng-controller="ProfileController">
 <!-- Main content -->
-  <section id="section-header" class="userProfile">
+<section id="section-header" class="userProfile">
     <div class="container">
-      <div class="box-body box-profile pull-left">
-        <div class="userProfile-details">
-          <img class="profile-user-img img-responsive img-circle pull-left" src="system/assets/img/sam.jpg" alt="User profile picture">
-          <h3 class="profile-username">Sam Janis</h3>
-          <p class="text-muted">West New York Middle School</p>
-        </div><!-- /.box-body -->
-
-
-        <div class="section-nav pull-left">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-header">Profile</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10">
           <ul class="profile-nav">
             <li><a href="/profile">Profile</a></li>
             <li><a href="/profile/password">Password</a></li>
             <li><a href="/profile/notifications">Email Notifications</a></li>
             <li><a href="/profile/students">Students</a></li>
           </ul>
-          </div>
-      </div>
-      <div class="pull-right">
-        <a href="#" class="btn btn-primary btn-block"><i class="fa fa-plus"></i> Add Students</a>
+        </div>
+        <div class="col-md-2 pull-right">
+          <a href="/profile/createStudent" class="btn btn-primary btn-block"><i class="fa fa-plus"></i> Add Students</a>
+        </div>
       </div>
     </div>
  </section>
