@@ -171,7 +171,7 @@
 #section-header ul {
   float: left;
   list-style: none;
-  padding: 0;
+  padding: 20px 0px;
 }
 #section-header li {
   float: left;
@@ -179,5 +179,31 @@
 }
 .userProfile {
   background-color: #282828;
+  min-height: 180px;
+}
+.userProfile h2{
+  padding: 100px 0px 40px 0px;
+  display: block;
+}
+.student-nav {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  /* margin: 5px 0 40px 0; */
+  padding: 10px 0;
+}
+.student_nav-list ul {
+  list-style: none;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+}
+.student_nav-list li {
+  float: left;
+  padding-right: 25px;
+  list-style: none;
+}
 
+/* removes shadow/bold from labels */
+.label {
+  text-shadow: none;
 }

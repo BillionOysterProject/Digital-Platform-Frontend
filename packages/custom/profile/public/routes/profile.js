@@ -24,6 +24,18 @@
     .state('students', {
       url: '/profile/students',
       templateUrl: 'profile/views/students.html'
+    })
+    .state('createStudent', {
+      url: '/profile/createStudent',
+      templateUrl: 'profile/views/createStudent.html'
+    })
+    .state('studentRequest', {
+      url: '/profile/studentRequest',
+      templateUrl: 'profile/views/studentRequest.html'
+    })
+    .state('importClass', {
+      url: '/profile/importClass',
+      templateUrl: 'profile/views/importClass.html'
     });
   }
 
