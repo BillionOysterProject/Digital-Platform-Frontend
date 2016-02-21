@@ -25,7 +25,7 @@
     font-size: 1.5em;
     color: #89D7F3;
     cursor: pointer;
-    top: 0px;
+    top: 0;
 }
 #admin-menu .opened .open-icon {
     text-align: right;
@@ -75,7 +75,7 @@
     background: url(/admin/assets/img/ninja/ninja.png) no-repeat;
     position: absolute;
     bottom: 60px;
-    left: 0px;
+    left: 0;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;

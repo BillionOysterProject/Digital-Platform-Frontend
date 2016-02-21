@@ -5,16 +5,13 @@
 
 /* Add this to the main BOP style page it stops the content from flying down */
  .content {
-   margin-top: 0px;
+   margin-top: 0;
  }
 
  /* Added sidebar nav position -need to transer this to the main template*/
  .sidebar{
-   padding: 10px 0px;
-   /* change this back once the nave works correctly */
-   /* margin-top: 65px; */
-   margin-top: 145px;
-
+   padding: 10px 0;
+   margin-top: 65px;
 }
 /* image center */
 .img-center {
@@ -174,7 +171,7 @@
 #section-header ul {
   float: left;
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 #section-header li {
   float: left;

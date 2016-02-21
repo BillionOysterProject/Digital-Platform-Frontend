@@ -223,7 +223,6 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         opacity: 0;
-        -ms-filter: "alpha(opacity=0)";
         -webkit-filter: alpha(opacity=0);
         -moz-filter: alpha(opacity=0);
         -ms-filter: alpha(opacity=0);
@@ -253,7 +252,6 @@
         -ms-transform: scale(1);
         transform: scale(1);
         opacity: 1;
-        -ms-filter: none;
         -webkit-filter: none;
         -moz-filter: none;
         -ms-filter: none;
