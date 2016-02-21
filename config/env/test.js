@@ -23,31 +23,31 @@ module.exports = {
     facebook: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/auth/facebook/callback',
+      callbackURL: 'http://localhost:8081/auth/facebook/callback',
       enabled: false
     },
     twitter: {
       clientID: 'CONSUMER_KEY',
       clientSecret: 'CONSUMER_SECRET',
-      callbackURL: 'http://localhost:3000/auth/twitter/callback',
+      callbackURL: 'http://localhost:8081/auth/twitter/callback',
       enabled: false
     },
     github: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/auth/github/callback',
+      callbackURL: 'http://localhost:8081/auth/github/callback',
       enabled: false
     },
     google: {
       clientID: 'APP_ID',
       clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/auth/google/callback',
+      callbackURL: 'http://localhost:8081/auth/google/callback',
       enabled: false
     },
     linkedin: {
       clientID: 'API_KEY',
       clientSecret: 'SECRET_KEY',
-      callbackURL: 'http://localhost:3000/auth/linkedin/callback',
+      callbackURL: 'http://localhost:8081/auth/linkedin/callback',
       enabled: false
     }
   },

@@ -55,7 +55,7 @@
         </div>
         <div class="input-wrapper">
             <select class="form-control">
-              <option ng-repeat="user in reg.user.roles" value="{{user.role}">{{user.role}}</option>
+              <option ng-model="reg.user.userrole" ng-repeat="user in reg.user.roles" value="{{user.role}">{{user.role}}</option>
             </select>
             <!-- <input required id="user_level" name="user_level" type="select"
                    placeholder="{{reg.user.roles[0]}}" ng-model="reg.user.userLevel"> -->

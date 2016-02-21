@@ -84,7 +84,7 @@ module.exports = function(MeanUser) {
          */
         create: function(req, res, next) {
             var user = new User(req.body);
-
+            console.log(user);
             user.provider = 'local';
 
             // because we set our user.provider to local our models/user.js validation will always be true

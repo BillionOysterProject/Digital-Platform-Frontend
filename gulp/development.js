@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 
 /*var defaultTasks = ['clean', 'jshint', 'less', 'csslint', 'devServe', 'watch'];*/
 // var defaultTasks = ['coffee','clean', 'less', 'sass', 'csslint', 'devServe', 'watch'];
-var defaultTasks = ['clean', 'sass', 'csslint', 'devServe', 'watch'];
+var defaultTasks = ['clean', 'sass', 'csslint', 'devServe'];
 
 gulp.task('env:development', function () {
   process.env.NODE_ENV = 'development';
@@ -66,14 +66,6 @@ gulp.task('devServe', ['env:development'], function () {
     ],
     nodeArgs: ['--debug'],
     stdout: false
-  }).on('readable', function() {
-    this.stdout.on('data', function(chunk) {
-      if(/Mean app started/.test(chunk)) {
-        setTimeout(function() { plugins.livereload.reload(); }, 500);
-      }
-      process.stdout.write(chunk);
-    });
-    this.stderr.pipe(process.stderr);
   });
 });
 
@@ -82,16 +74,6 @@ gulp.task('devServe', ['env:development'], function () {
 //     .pipe(coffee({bare: true}).on('error', gutil.log))
 //     .pipe(gulp.dest('./packages'));
 // });
-
-gulp.task('watch', function () {
-  plugins.livereload.listen({interval:500});
-
-  // gulp.watch(paths.coffee,['coffee']);
-  gulp.watch(paths.js, ['jshint']);
-  gulp.watch(paths.css, ['csslint']).on('change', plugins.livereload.changed);
-  // gulp.watch(paths.less, ['less']);
-  gulp.watch(paths.sass, ['sass']);
-});
 
 function count(taskName, message) {
   var fileCount = 0;
