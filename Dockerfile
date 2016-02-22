@@ -1,32 +1,32 @@
-FROM node:0.10
+FROM node:0.12
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+# Install gem sass for  grunt-contrib-sass
+RUN apt-get update -qq && apt-get install -y build-essential
+RUN apt-get install -y ruby
+RUN gem install sass
 
-RUN npm install -g mean-cli bower gulp
+WORKDIR /home/mean
 
-RUN	groupadd -r node \
-&&	useradd -r -m -g node node
+# Install Mean.JS Prerequisites
+RUN npm install -g grunt-cli
+RUN npm install -g bower
 
-COPY . /usr/src/app/
-RUN rm -rf /usr/src/app/node_modules
-RUN chown -R node:node /usr/src/app
+# Install Mean.JS packages
+ADD package.json /home/mean/package.json
+RUN npm install
 
-USER node
-RUN touch /home/node/.mean
-RUN npm install 
-ENV PORT 8081  
-ENV DB_PORT_27017_TCP_ADDR db
-CMD [ "npm", "start" ]
-EXPOSE 8081
+# Manually trigger bower. Why doesnt this work via npm install?
+ADD .bowerrc /home/mean/.bowerrc
+ADD bower.json /home/mean/bower.json
+RUN bower install --config.interactive=false --allow-root
 
+# Make everything available for start
+ADD . /home/mean
 
-#How to build:
-# git clone https://github.com/linnovate/mean
-# cd mean
-# docker build -t mean .
+# Set development environment as default
+ENV NODE_ENV development
 
-#How to run:
-# docker pull mongo
-# docker run -d --name db mongo
-# docker run -p 8081:8081 --link db:db mean
+# Port 3000 for server
+# Port 35729 for livereload
+EXPOSE 3000 35729
+CMD ["grunt"]
