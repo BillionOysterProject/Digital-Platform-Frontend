@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
+  db: 'mongodb://fearless.tech:tech.fearless@ds039195.mongolab.com:39195/bop-dev',
   debug: true,
   logging: {
     format: 'tiny'

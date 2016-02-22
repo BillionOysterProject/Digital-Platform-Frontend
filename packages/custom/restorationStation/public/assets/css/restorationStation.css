@@ -1,0 +1,13 @@
+.restorationStation-example h1 {
+  background-color: purple
+}
+.orsView {
+  background-color: #c2c2c2;
+  background-image: image(system/assets/img/sam.jpg);
+  height: 400px;
+}
+.orsView h2 {
+  margin-top: 350px;
+  font-weight: bold;
+  text-shadow: 0 0 11px #000000;
+}

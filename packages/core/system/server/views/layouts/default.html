@@ -2,15 +2,19 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" itemscope="itemscope" itemtype="http://schema.org/Product">
 {% include '../includes/head.html' %}
 
-<body data-ng-controller="ThemeController" ng-cloak class="ng-cloak" ng-class="state">
+<body class="hold-transition skin-blue sidebar-mini" data-ng-controller="ThemeController" ng-cloak class="ng-cloak" ng-class="state">
+  <div class="wrapper">
     <div data-ng-include="'/system/views/header.html'" data-role="navigation"></div>
     <div data-ng-include="'/admin/views/index.html'"></div>
-    <section class="content">
-        <section class="container">
+    <div class="content-wrapper">
+    <!-- <section class="content">
+        <section class="container"> -->
             {% block content %}{% endblock %}
-        </section>
-    </section>
+        <!-- </section>
+    </section> -->
+  </div><!-- //content-wrapper -->
     {% include '../includes/foot.html' %}
+  </div><!-- //Wrapper -->
 </body>
 
 </html>
