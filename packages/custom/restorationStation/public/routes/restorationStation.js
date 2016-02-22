@@ -20,6 +20,10 @@
     .state('Register ORS', {
       url: '/restorationStation/register',
       templateUrl: 'restorationStation/views/registerORS.html'
+    })
+    .state('Create ORS', {
+      url: '/restorationStation/create',
+      templateUrl: 'restorationStation/views/createORS.html'
     });
   }
 
