@@ -17,6 +17,7 @@ Library.register(function(app, auth, database) {
   Library.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
+
   Library.menus.add({
     title: 'Library',
     link: 'library',

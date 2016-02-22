@@ -9,7 +9,8 @@
     "mocha": "node tools/test/run-mocha.js",
     "karma": "node node_modules/karma/bin/karma start karma.conf.js",
     "test": "gulp test",
-    "test-e2e": "gulp e2e.test"
+    "test-e2e": "gulp e2e.test",
+    "install": "bower install --allow-root"
   },
   "dependencies": {
     "assetmanager": "^1.2.2",

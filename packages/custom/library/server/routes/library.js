@@ -7,28 +7,6 @@
 
     var library = require('../controllers/library')(Library);
     app.route('/api/library/search')
-      .get(library.search)
-    // app.get('/api/library/search/:', function (req, res, next) {
-    //   res.send('Anyone can access this');
-    // });
-    //
-    // app.get('/api/library/all', auth.requiresLogin, function (req, res, next) {
-    //   // Library.all();
-    //   res.jsonp(req.user)
-    //   // res.send('Only authenticated users can access this');
-    // });
-    //
-    // app.get('/api/library/example/admin', auth.requiresAdmin, function (req, res, next) {
-    //   res.send('Only users with Admin role can access this');
-    // });
-    //
-    // app.get('/api/library/example/render', function (req, res, next) {
-    //   Library.render('index', {
-    //     package: 'library'
-    //   }, function (err, html) {
-    //     //Rendering a view from the Package server/views
-    //     res.send(html);
-    //   });
-    // });
+      .get(library.search);
   };
 })();

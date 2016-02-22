@@ -17,8 +17,7 @@
               '<div class="panel-body">' +
                 '<small>Field</small>' +
                 '<h6>{{title}}</h6>' +
-                '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus mi mollis diam laoreet vehicula. Sed molestie, diam eu lacinia tincidunt, lectus purus fringilla sem, at sagittis orci leo ultrices neque. Vivamus ut magna mauris. Suspendisse' +
-                  'ex lectus, aliquet in justo et, hendrerit sollicitudin lorem.</p>' +
+                '<p ng-bind-html="summary"></p>' +
               '</div>' +
           '</a>' +
           '<div class="panel-footer hidden-xs hidden-sm">' +
@@ -43,11 +42,10 @@
           '</div>' +
         '</div>',
         scope: {
-          outModel: '=ngModel',
           title: '@',
           grade: '@',
           setting: '@',
-          outerColumn: '@'
+          summary: '@'
         },
         require: 'ngModel',
         replace: true
