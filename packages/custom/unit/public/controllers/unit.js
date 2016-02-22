@@ -29,9 +29,7 @@
 
     $scope.sendModel = {
       stageOne: {
-        unitTitle: {
-          lessonTitle: undefined
-        },
+        unitTitlelessonTitle: undefined,
         desiredResults: {
           fieldWork: undefined,
           scienceContent: undefined

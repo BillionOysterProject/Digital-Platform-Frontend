@@ -1,27 +1,129 @@
-<div class="" data-ng-controller="LibraryController">
-  <h1>Example view from your new awesome package</h1>
-  <h2>Package: {{package.name}}</h2>
-  <ol>
-    <li>
-      <a href="/api/library/example/anyone" target="_self">Server route that anyone can access</a>
-    </li>
-    <li>
-      <a href="/api/library/example/auth" target="_self">Server route that requires authentication</a>
-    </li>
-    <li>
-      <a href="/api/library/example/admin" target="_self">Server route that requires admin user</a>
-    </li>
-    <li>
-      <a href="/api/library/example/render" target="_self">Raw Html rendering example from using swig</a>
-    </li>
-  </ol>
-  <h3><img src="/library/assets/img/logo.png" /></h3>
-  </br>
-  <p class="alert alert-info">You can find your package in /packages/library</p>
-  </br>
-  <p class="alert alert-warning">MEAN versions prior to 0.3.2 will be in /node_modules/library</p>
-  </br>
-  <h3><a href="http://learn.mean.io">Documentation</a></h3>
-  </br>
-  <input type="text" ng-model="selected" uib-typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+<div class="wrapper" data-ng-controller="LibraryController" style="background-color: white;">
+
+  <div class="library-search" style="background-color: white;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h1 class="text-center">Search for a Lesson</h1>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </span>
+            <input type="text" class="form-control quicksearch" placeholder="Search for a Lesson, Unit or a Teacher..." ng-model="searchItem" ng-change="searchBackend()" aria-describedby="sizing-addon1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navigation-default2" class="navbar-collapse collapse">
+        <div class="row">
+          <div class="col-sm-9 button-group filters-button-group">
+            <div class="library-filter-nav">
+
+              <ul class="nav navbar-nav">
+                <li class="is-checked"><a data-filter="*">Show All</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subject Area(s) <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a data-filter="*">Show All</a></li>
+                    <li class="dropdown-header cat-title"><a data-filter=".science">Science</a></li>
+                    <ul class="dropdown-sub">
+                      <li><a data-filter=".ecology">Ecology</a></li>
+                      <li><a data-filter=".geologyeatchscience">Geology and Earth Science </a></li>
+                      <li><a data-filter=".limnology">Limnology</a></li>
+                      <li><a data-filter=".marinebio">Marine Biology</a></li>
+                      <li><a data-filter=".oceanography">Oceanography</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <li class="dropdown-header cat-title"><a data-filter=".technology">Technology</a></li>
+                    <ul class="dropdown-sub">
+                      <li><a data-filter=".computerscience">Computer Science</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <li><a data-filter=".engineering">Engineering</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li class="dropdown-header cat-title"><a data-filter=".math">Math</a></li>
+                    <ul class="dropdown-sub">
+                      <li><a data-filter=".dataanalysis">Data Analysis</a></li>
+                      <li><a data-filter=".graphing">Graphing</a></li>
+                      <li><a data-filter=".ratiosproportions">Ratios & Proportions</a></li>
+                      <li><a data-filter=".algebra">Algebra</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <li class="dropdown-header cat-title"><a data-filter=".socialstudies">Social Studies</a></li>
+
+                    <ul class="dropdown-sub">
+                      <li><a data-filter=".history">History</a></li>
+                      <li><a data-filter=".economics">Economics</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <li><a data-filter=".englishlanguagearts">English Language Arts</a></li>
+                    <li><a data-filter=".music">Music</a></li>
+                    <li><a data-filter=".music">Art</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a data-filter=".classroom">Classroom</a></li>
+                    <li><a data-filter=".field">Field</a></li>
+                    <li><a data-filter=".other">Other</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Units<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a data-filter=".urbaneco"><i class="fa fa-circle text-primary"></i> NYC's Urban Ecosystem</a></li>
+                    <li><a data-filter=".oysters"><i class="fa fa-circle text-success"></i> Oysters</a></li>
+                    <li><a data-filter=".mobileorganism"><i class="fa fa-circle text-default"></i> Mobile Organisms</a></li>
+                    <li><a data-filter=".sessileorganism"><i class="fa fa-circle text-warning"></i> Sessile Organisms</a></li>
+                    <li><a data-filter=".waterquality"><i class="fa fa-circle text-info"></i> Water Quality</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="col-sm-3">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="library">
+      <div class="row">
+      <div class="grid">
+        <h4>Lessons</h4>
+        <div ng-repeat="item in queryResults[0]">
+          <search-card
+            title="{{item.lessonUpload.title}}"
+            grade="{{item.lessonOverview.grade}}"
+            setting="{{item.lessonOverview.setting}}"
+            summary="{{item.lessonOverview.lessonSummary}}">
+          </search-card>
+        </div>
+      </div>
+        </div>
+        <div class="row">
+        <div class="grid">
+        <h4>Units</h4>
+        <div ng-repeat="item in queryResults[1]">
+          <search-card></search-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
