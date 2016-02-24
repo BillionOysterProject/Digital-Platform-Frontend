@@ -41,19 +41,19 @@ var instructionPlans = {
 
 var standardsOptions = {
   nycScienceScopeSequence: {
-    type: String,
+    type: Array,
     required: false
   },
   ngssStandards: {
-    type: String,
+    type: Array,
     required: false
   },
   commonCoreEla: {
-    type: String,
+    type: Array,
     required: false
   },
   commonCoreMath: {
-    type: String,
+    type: Array,
     required: false
   }
 }
@@ -92,9 +92,8 @@ var LessonSchema = new Schema({
       trim: true
     },
     subjectAreas: {
-      type: String,
-      required: true,
-      trim: true
+      type: Array,
+      required: true
     },
     protocolConnections: {
       type: String,
@@ -128,7 +127,7 @@ var LessonSchema = new Schema({
       required: false
     },
     vocabulary: {
-      type: String,
+      type: Array,
       required: false
     }
   },

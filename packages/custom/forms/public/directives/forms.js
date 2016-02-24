@@ -69,4 +69,21 @@
         replace: true
       };
     });
+    angular
+    .module('mean.forms')
+    .directive('selectTwoDropdown', function() {
+      return {
+        restrict: 'AE',
+        templateUrl: 'forms/templates/selectTwoDropdown.html',
+        scope: {
+          outModel: '=ngModel',
+          inTitle: '@',
+          outerColumn: '@',
+          optionsArray: '=',
+          placeholder: "@"
+        },
+        require: 'ngModel',
+        replace: true
+      };
+    });
 })();

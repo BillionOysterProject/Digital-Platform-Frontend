@@ -1,0 +1,16 @@
+<div><div class="{{outerColumn}}">
+    <div class="form-group ">
+        <label for="{{inTitle}">{{inTitle}}
+            <!--<span class="glyphicon glyphicon-option-vertical " aria-hidden="true " data-toggle="modal " data-target="#myModal "></span>-->
+        </label>
+        <ui-select multiple>
+            <ui-select-match placeholder="{{placeholder}}" ng-model="outModel">
+                {{$item}}
+            </ui-select-match>
+            <ui-select-choices repeat="option in optionsArray | filter:$select.search">
+                {{option}}
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</div>
+</div>
