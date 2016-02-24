@@ -33,7 +33,33 @@
 
               <ul class="nav navbar-nav">
                 <li class="is-checked"><a data-filter="*">Show All</a></li>
-                <li class="dropdown">
+
+                <li class="dropdown" uib-dropdown is-open="status.isopen">
+                  <a class="dropdown-toggle" type="button" uib-dropdown-toggle ng-disabled="disabled">
+                    Subject Area(s)
+                    <span class="caret"></span>
+                  </a>
+                  <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                    <li class="dropdown-header cat-title"><a>Science</a></li>
+                    <ul class="dropdown-sub">
+                      <li><a>Ecology</a></li>
+                      <li><a>Geology and Earth Science </a></li>
+                      <li><a>Limnology </a></li>
+                      <li><a>Marine Biology</a></li>
+                      <li><a>Oceanography</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <li class="dropdown-header cat-title"><a>Technology</a></li>
+                    <ul class="dropdown-sub">
+                      <li><a>Computer Science</a></li>
+                    </ul>
+                    <div class="dropdown-divider"></div>
+                    <ul class="dropdown-sub">
+                      <li><a>Engineering</a></li>
+                    </ul>
+                  </ul>
+                </li>
+                <!-- <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subject Area(s) <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a data-filter="*">Show All</a></li>
@@ -72,7 +98,7 @@
                     <li><a data-filter=".music">Music</a></li>
                     <li><a data-filter=".music">Art</a></li>
                   </ul>
-                </li>
+                </li> -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setting<span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -105,25 +131,21 @@
   <div class="container">
     <div class="library">
       <div class="row">
-      <div class="grid">
-        <h4>Lessons</h4>
-        <div ng-repeat="item in queryResults[0]">
-          <search-card
-            title="{{item.lessonUpload.title}}"
-            grade="{{item.lessonOverview.grade}}"
-            setting="{{item.lessonOverview.setting}}"
-            summary="{{item.lessonOverview.lessonSummary}}">
-          </search-card>
+        <div class="grid">
+          <h4>Lessons</h4>
+          <div ng-repeat="item in queryResults[0]">
+            <search-card title="{{item.lessonUpload.title}}" grade="{{item.lessonOverview.grade}}" setting="{{item.lessonOverview.setting}}" summary="{{item.lessonOverview.lessonSummary}}">
+            </search-card>
+          </div>
         </div>
       </div>
-        </div>
-        <div class="row">
+      <div class="row">
         <div class="grid">
-        <h4>Units</h4>
-        <div ng-repeat="item in queryResults[1]">
-          <search-card></search-card>
+          <h4>Units</h4>
+          <div ng-repeat="item in queryResults[1]">
+            <search-card></search-card>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

@@ -14,11 +14,8 @@
     $scope.package = {
       name: 'lesson'
     };
-    $scope.states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
     $scope.isArray = angular.isArray;
-
-
 
     // Own callback after Editor-Creation
     $scope.editorCallback = function(editor, name) {
@@ -39,7 +36,7 @@
         grade: '6-8',
         classPeriods: '1',
         setting: 'Classroom',
-        subjectAreas: null,
+        subjectAreas: [],
         protocolConnections: null,
         lessonSummary: ''
       },
@@ -48,7 +45,7 @@
         supplies: null,
         teacherResources: null,
         handoutsFileInput: null,
-        vocabulary: null
+        vocabulary: []
       },
       background: null,
       instructionPlan: {
@@ -59,13 +56,42 @@
         evaluate: null
       },
       standards: {
-        nycScienceScopeSequence: null,
-        ngssStandards: null,
-        commonCoreEla: null,
-        commonCoreMath: null
+        nycScienceScopeSequence: [],
+        ngssStandards: [],
+        commonCoreEla: [],
+        commonCoreMath: []
       }
     };
 
+    $scope.subjectAreaOptions = [
+            'Art',
+            'Agriscience & Technology',
+            'Arithmetic',
+            'Algebra',
+            'Band',
+            'Biology',
+            'Chemistry',
+            'Civics'
+          ];
+          
+    $scope.vocabOptions = [
+        'Art','Ecosystem','Hypothesis', 'Oyster', 'Science'
+    ];
+
+    //TODO - make this a service
+    $scope.nycScienceScopeOptions = [
+        "PS1A Structure and Properties of matter",
+        "PS1B Chemical Reactions",
+        "PS1C Nuclear Processes",
+        "ESS1A The Universe and Its Stars",
+        "ESS1B Earth and the Solar System",
+        "ESS1C The History of Planet Earth ESS2 Earth’s",
+        "ESS2A Earth Materials and Systems",
+        "ESS2B Plate Tectonics and Large-Scale System Interactions",
+        "ESS2C The Roles of Water in Earth’s Surface Processes",
+        "PS1 Matter and Its Interactions",
+        "Grade 8, Unit1: Humans and the Environment"
+    ];
     $scope.lessonConfig = [{
       'blockTitle': 'Lesson Upload',
       'blockItems': {
