@@ -76,10 +76,10 @@ var UnitSchema = new Schema({
       }
     }
   },
-  stage2: {
+  stageTwo: {
     stage2Evidence: {
       numberExpectation: {
-        type: String,
+        type: Array,
         required: false
       },
       scienceAndEngineering: {
@@ -100,9 +100,8 @@ var UnitSchema = new Schema({
     },
     assessmentEvidence: {
       researchProject: {
-        type: String,
-        required: false,
-        trim: true
+        type: Array,
+        required: false
       },
       extensions: {
         type: String,
