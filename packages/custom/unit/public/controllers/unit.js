@@ -48,20 +48,31 @@
           fieldLessons: undefined
         }
       },
-      stage2: {
+      stageTwo: {
         stage2Evidence: {
-          numberExpectation: 'K-PS2-1 Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.',
+          numberExpectation: [],
           scienceAndEngineering: undefined,
           disciplinaryCoreIdeas: undefined,
           crossCuttingConcepts: undefined
         },
         assessmentEvidence: {
-          researchProject: undefined,
+          researchProject: [],
           extensions: undefined
         }
       }
     };
 
+    $scope.numberExpectationOptions = [
+        'K-PS2-1 Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.',
+        'K-PS2-2 Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.'
+    ];
+
+    $scope.reasearchProjectOptions = [
+        'How do site conditions affect oyster growth?',
+        'Design your own oyster reef in New York Harbor',
+        'Who lives in my Oyster Restoration Station?',
+        'Project: Improving Wastewater Treatment'
+    ]
     $scope.onSubmit = function() {
       console.log('here')
         // alert(JSON.stringify(vm.model), null, 2);

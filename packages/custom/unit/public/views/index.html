@@ -164,21 +164,7 @@
                       </div>
                       <div id="collapseEvidence" class="panel-body collapse in">
                         <div class="row">
-                          <!-- TODO - Select 2 plugin -->
-                          <!-- <div class="col-md-8">
-                            <div class="form-group">
-                              <label for="numberexpectation">Number: Expectation</label>
-                              <div class="row">
-                                <div class="col-md-12">
-                                  <select id="numberexpectation" class="js-example-basic-multiple col-md-12" multiple="" style="width:600" id="source" placeholder="What project would you like to connect to">
-                                    <option value="proj1">K-PS2-1 Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.</option>
-                                    <option value="proj2">K-PS2-2 Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div> -->
-                          <drop-down outer-column="col-md-4" in-title="Number: Expectation" ng-model="sendModel.stage2.stage2Evidence.numberExpectation" in-selectable-array="['K-PS2-1 Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.','K-PS2-2 Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.']"></drop-down>
+                          <select-two-dropdown outer-column="col-md-12" in-title="Number: Expectation" placeholder="Select" options-array="numberExpectationOptions" ng-model="sendModel.stageTwo.stage2Evidence.numberExpectation"></select-two-dropdown>
                         </div>
                         <div class="col-lg-12 evidence">
                           <div class="panel panel-transparent">
@@ -228,7 +214,7 @@
                           </div>
                         </div>
                         <div class="row">
-                          <drop-down outer-column="col-md-8" in-title="Research Project" ng-model="sendModel.stage2.assessmentEvidence.researchProject" in-selectable-array="['How do site conditions affect oyster growth?','Design your own oyster reef in New York Harbor','Who lives in my Oyster Restoration Station?','Project: Improving Wastewater Treatment']"></drop-down>
+                          <select-two-dropdown outer-column="col-md-12" in-title="Research Project" placeholder="Select" options-array="reasearchProjectOptions" ng-model="sendModel.stageTwo.assessmentEvidence.researchProject"></select-two-dropdown>
                         </div>
                         <div class="row">
                           <div class="col-md-12 stage2-tab3">
