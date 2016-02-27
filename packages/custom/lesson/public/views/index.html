@@ -3,21 +3,20 @@
         <div class="row">
             <div class="col-md-12">
                 <form ng-submit="onSubmit">
-                    <div class="panel panel-default" ng-if="lessonConfig[0].blockTitle === 'Lesson Upload'">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
-                            <div class="panel-title">{{lessonConfig[0].blockTitle}}</div>
+                            <div class="panel-title">Lesson Upload</div>
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <text-input outer-column="col-md-8" in-title="{{lessonConfig[0].blockItems.title.label}}" ng-model="sendModel.lessonUpload.title"></text-input>
-                                <drop-down outer-column="col-md-4" in-title="{{lessonConfig[0].blockItems.unit.label}}" ng-model="sendModel.lessonUpload.unit"
-                                in-selectable-array="lessonConfig[0].blockItems.unit.options"></drop-down>
+                                <text-input outer-column="col-md-8" in-title="Lesson Title" ng-model="sendModel.lessonUpload.title"></text-input>
+                                <drop-down outer-column="col-md-4" in-title="unit" ng-model="sendModel.lessonUpload.unit" in-selectable-array="defaultArrays.unit"></drop-down>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default " ng-if="lessonConfig[1].blockTitle==='Lesson Overview' ">
+                    <div class="panel panel-default ">
                         <div class="panel-heading ">
-                            <div class="panel-title ">{{lessonConfig[1].blockTitle}}</div>
+                            <div class="panel-title ">Lesson Overview</div>
                             <div class="panel-controls ">
                                 <ul>
                                     <li>
@@ -32,33 +31,31 @@
                             <div class="row ">
                                 <div class="col-md-6 ">
                                     <div class="row ">
-                                        <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.grade.label}}" ng-model="sendModel.lessonOverview.grade"
-                                        in-selectable-array="lessonConfig[1].blockItems.grade.options"></drop-down>
-                                        <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.classPeriod.label}}" ng-model="sendModel.lessonOverview.classPeriods"
-                                        in-selectable-array="lessonConfig[1].blockItems.classPeriod.options"></drop-down>
-                                        <drop-down outer-column="col-md-4" in-title="{{lessonConfig[1].blockItems.setting.label}}" ng-model="sendModel.lessonOverview.setting"
-                                        in-selectable-array="lessonConfig[1].blockItems.setting.options"></drop-down>
+                                        <drop-down outer-column="col-md-4" in-title="Grade" ng-model="sendModel.lessonOverview.grade"
+                                        in-selectable-array="defaultArrays.grade"></drop-down>
+                                        <drop-down outer-column="col-md-4" in-title="Class Periods" ng-model="sendModel.lessonOverview.classPeriods"
+                                        in-selectable-array="defaultArrays.classPeriod"></drop-down>
+                                        <drop-down outer-column="col-md-4" in-title="Setting" ng-model="sendModel.lessonOverview.setting"
+                                        in-selectable-array="defaultArrays.setting"></drop-down>
                                     </div>
                                     <div class="row ">
-                                        <text-input outer-column="col-md-12" in-title="{{lessonConfig[0].blockItems.protocolConnections.label}}" ng-model="sendModel.lessonOverview.protocolConnections"></text-input>
+                                        <text-input outer-column="col-md-12" in-title="Protocol Connections" ng-model="sendModel.lessonOverview.protocolConnections"></text-input>
                                     </div>
                                 </div>
                                 <div class="col-md-6 ">
-                                    <select-two-dropdown outer-column="col-md-12" in-title="Subject Area(s)" placeholder="Select subject areas..." options-array="subjectAreaOptions"
-                                    ng-model="sendModel.lessonOverview.subjectAreas"></select-two-dropdown>
+                                    <select-two-dropdown outer-column="col-md-12" in-title="Subject Area(s)" placeholder="Select subject areas..." options-array="defaultArrays.subjectAreaOptions" ng-model="sendModel.lessonOverview.subjectAreas"></select-two-dropdown>
                                 </div>
                             </div>
                             <div class="row ">
-                                <text-area outer-column="col-md-12" in-title="{{lessonConfig[1].blockItems.lessonSummary.label}}" ng-model="sendModel.lessonOverview.lessonSummary"></text-area>
+                                <text-area outer-column="col-md-12" in-title="Lesson Summary" ng-model="sendModel.lessonOverview.lessonSummary"></text-area>
                             </div>
                         </div>
                     </div>
-                    <div class="row " ng-if="lessonConfig[2].blockTitle==='Lesson Objectives' ">
+                    <div class="row ">
                         <div class="col-md-12 ">
                             <div class="panel panel-default ">
-                                <!-- Lesson Objectives -->
                                 <div class="panel-heading ">
-                                    <div class="panel-title ">{{lessonConfig[2].blockTitle}}</div>
+                                    <div class="panel-title ">Lesson Objectives</div>
                                     <div class="panel-controls ">
                                         <ul>
                                             <li>
@@ -70,15 +67,15 @@
                                 </div>
                                 <div id="collapseLessonObject " class="panel-body collapse in ">
                                     <div class="row ">
-                                        <text-area outer-column="col-md-12" in-title="{{lessonConfig[1].blockItems.objectives.label}}" ng-model="sendModel.lessonObjectives"></text-area>
+                                        <text-area outer-column="col-md-12" in-title="Objectives" ng-model="sendModel.lessonObjectives"></text-area>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default " ng-if="lessonConfig[3].blockTitle==='Materials & Resources Objectives' ">
+                    <div class="panel panel-default">
                         <div class="panel-heading ">
-                            <div class="panel-title ">{{lessonConfig[3].blockTitle}}</div>
+                            <div class="panel-title ">Materials & Resources Objectives</div>
                             <div class="panel-controls ">
                                 <ul>
                                     <li>
@@ -128,7 +125,7 @@
                                             </div>
                                         </div>
                                         <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-4" in-title="Vocabulary" placeholder="This is a dynamic module area" options-array="vocabOptions"
+                                            <select-two-dropdown outer-column="col-md-4" in-title="Vocabulary" placeholder="This is a dynamic module area" options-array="defaultArrays.vocabOptions"
                                             ng-model="sendModel.materialsResources.vocabulary"></select-two-dropdown>
                                         </div>
                                     </div>
@@ -136,7 +133,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row " ng-if="lessonConfig[4].blockTitle==='Background' ">
+                    <div class="row ">
                         <div class="col-md-12 ">
                             <div class="panel panel-default ">
                                 <!-- Background -->
@@ -162,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row " ng-if="lessonConfig[5].blockTitle==='Instruction Plan' ">
+                    <div class="row ">
                         <div class="col-md-12 ">
                             <!-- Lesson Objectives -->
                             <div class="panel panel-default ">
@@ -228,7 +225,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row " ng-if="lessonConfig[6].blockTitle==='Standards' ">
+                    <div class="row">
                         <div class="col-md-12 ">
                             <div class="panel panel-default ">
                                 <div class="panel-heading ">
@@ -246,19 +243,19 @@
                                     <div class="panel-body ">
                                         <div class="row ">
                                             <select-two-dropdown outer-column="col-md-12" in-title="New York City Science Scope & Sequence" placeholder="Text input for now, select 2 in the future"
-                                            options-array="nycScienceScopeOptions" ng-model="sendModel.standards.nycScienceScopeSequence"></select-two-dropdown>
+                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.nycScienceScopeSequence"></select-two-dropdown>
                                         </div>
                                         <div class="row ">
                                             <select-two-dropdown outer-column="col-md-12" in-title="NGSS Standards" placeholder="Text input for now, select 2 in the future"
-                                            options-array="nycScienceScopeOptions" ng-model="sendModel.standards.ngssStandards"></select-two-dropdown>
+                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.ngssStandards"></select-two-dropdown>
                                         </div>
                                         <div class="row ">
                                             <select-two-dropdown outer-column="col-md-12" in-title="Common Core ELA" placeholder="Text input for now, select 2 in the future"
-                                            options-array="nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreEla"></select-two-dropdown>
+                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreEla"></select-two-dropdown>
                                         </div>
                                         <div class="row ">
                                             <select-two-dropdown outer-column="col-md-12" in-title="Common Core Math" placeholder="Text input for now, select 2 in the future"
-                                            options-array="nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreMath"></select-two-dropdown>
+                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreMath"></select-two-dropdown>
                                         </div>
                                     </div>
                                 </div>
