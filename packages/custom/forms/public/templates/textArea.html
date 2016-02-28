@@ -1,0 +1,15 @@
+<div>
+  <div class="{{outerColumn}}">
+    <label for="{{linTitle}}">{{inTitle}}</label>
+    <small ng-if="required">(Required)</small>
+    <textarea ui-tinymce ng-model="outModel"></textarea>
+    <div ng-if="showErrorOnSubmit">
+      <div ng-if="required">
+        {{outModel}}
+      <div ng-if="!outModel" style="color:maroon" role="alert">
+        <div>{{errorMessage}}</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

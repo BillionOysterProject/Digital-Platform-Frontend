@@ -7,20 +7,15 @@
     .directive('textInput', function() {
       return {
         restrict: 'AE',
-        template: '<div class="{{outerColumn}}">' +
-          '<div class="form-group">' +
-          '<label for="{{inTitle}}">{{inTitle}}</label>' +
-          '<div class="row">' +
-          '<div class="col-md-12">' +
-          '<input type="text" class="form-control " id="lessontitle " placeholder="Lesson Title" ng-model="outModel">' +
-          '</div>' +
-          '</div>' +
-          '</div>' +
-          '</div>',
+        templateUrl: 'forms/templates/textInput.html',
         scope: {
           outModel: '=ngModel',
           inTitle: '@',
-          outerColumn: '@'
+          outerColumn: '@',
+          placeHolder: '@',
+          required: '=',
+          errorMessage: '@',
+          showErrorOnSubmit: '='
         },
         require: 'ngModel',
         replace: true
@@ -34,7 +29,8 @@
         restrict: 'AE',
         template: '<div class="{{outerColumn}}">' +
           '<div class="form-group">' +
-          '<label for="{{inTitle}}">{{inTitle}}</label>' +
+          '<label for="{{inTitle}}">{{inTitle}}</label> ' +
+          '<small ng-if="required">(Required)</small>' +
           '<select class="form-control " ng-model="outModel" selected="selected ">' +
           '<option ng-repeat="item in inSelectableArray ">{{item}}</option>' +
           '</select>' +
@@ -44,7 +40,8 @@
           outModel: '=ngModel',
           inSelectableArray: '=',
           inTitle: '@',
-          outerColumn: '@'
+          outerColumn: '@',
+          required: '='
         },
         require: 'ngModel',
         replace: true
@@ -56,20 +53,20 @@
     .directive('textArea', function() {
       return {
         restrict: 'AE',
-        template: '<div class="{{outerColumn}}">' +
-          '<label for="{{linTitle}}">{{inTitle}}</label>' +
-          '<textarea ui-tinymce ng-model="outModel"></textarea>' +
-          '</div>',
+        templateUrl: 'forms/templates/textArea.html',
         scope: {
           outModel: '=ngModel',
           inTitle: '@',
-          outerColumn: '@'
+          outerColumn: '@',
+          required: '=',
+          errorMessage: '@',
+          showErrorOnSubmit: '='
         },
         require: 'ngModel',
         replace: true
       };
     });
-    angular
+  angular
     .module('mean.forms')
     .directive('selectTwoDropdown', function() {
       return {
@@ -80,7 +77,10 @@
           inTitle: '@',
           outerColumn: '@',
           optionsArray: '=',
-          placeholder: "@"
+          placeholder: "@",
+          required: '=',
+          errorMessage: '@',
+          showErrorOnSubmit: '='
         },
         require: 'ngModel',
         replace: true

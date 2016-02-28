@@ -3,12 +3,11 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose'),
-  Lesson = mongoose.model('Lesson'),
-  Unit = mongoose.model('Unit'),
-  config = require('meanio').loadConfig(),
-  _ = require('lodash'),
-  Async = require('async');
+var mongoose = require('mongoose');
+  // Unit = mongoose.model('Unit'),
+  var config = require('meanio').loadConfig();
+  var _ = require('lodash');
+  // var Lesson = mongoose.model('Lesson');
 
 module.exports = function(Lessons) {
 
@@ -34,47 +33,20 @@ module.exports = function(Lessons) {
 
       var searchString = String(req.query.textSearch);
 
+      mongoose.model('Lesson').find({
+        'lessonUpload.title': new RegExp(searchString, 'i')
+      }).exec(function(err, lessons) {
+        if (err) {
+          return res.status(500).json({
+            error: 'Cannot list the lessons'
+          });
+        }
+        if (results == null || results[0] == null) {
+          return res.send(400);
+        }
+        res.json(results);
+      });
 
-
-      Async.parallel([
-          function(callback) {
-            Lesson.find({
-              'lessonUpload.title': new RegExp(searchString, 'i')
-            }).exec(function(err, lessons) {
-              if (err) {
-                return res.status(500).json({
-                  error: 'Cannot list the lessons'
-                });
-              }
-              callback(null, lessons)
-            });
-          },
-          function(callback) {
-            console.log(searchString)
-            Unit.find({
-              'stageOne.unitTitlelessonTitle': new RegExp(searchString, 'i')
-            }).exec(function(err, units) {
-              if (err) {
-                return res.status(500).json({
-                  error: 'Cannot list the lessons'
-                });
-              }
-              callback(null, units)
-            });
-          }
-        ],
-        //Compute all results
-        function(err, results) {
-          console.log(results);
-          if (err) {
-            console.log(err);
-            return res.send(400);
-          }
-          if (results == null || results[0] == null) {
-            return res.send(400);
-          }
-          res.json(results)
-        });
     },
     /**
      * Show an article

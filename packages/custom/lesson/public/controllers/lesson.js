@@ -38,7 +38,7 @@
         setting: 'Classroom',
         subjectAreas: [],
         protocolConnections: null,
-        lessonSummary: ''
+        lessonSummary: null
       },
       lessonObjectives: null,
       materialsResources: {
@@ -78,19 +78,8 @@
         "PS1 Matter and Its Interactions",
         "Grade 8, Unit1: Humans and the Environment"
       ],
-      vocabOptions: [
-        'Art', 'Ecosystem', 'Hypothesis', 'Oyster', 'Science'
-      ],
-      subjectAreaOptions: [
-        'Art',
-        'Agriscience & Technology',
-        'Arithmetic',
-        'Algebra',
-        'Band',
-        'Biology',
-        'Chemistry',
-        'Civics'
-      ],
+      vocabOptions: ['Art', 'Ecosystem', 'Hypothesis', 'Oyster', 'Science'],
+      subjectAreaOptions: ['Art','Agriscience & Technology','Arithmetic','Algebra','Band','Biology','Chemistry','Civics'],
       unit: ['Action', 'Field'],
       grade: ['6-8', '4th', '5th', '6th', '7th', '8th'],
       classPeriod: ['1', '2', '3', '4', '5', '6', '7', '8'],
@@ -98,6 +87,8 @@
     };
 
     $scope.onSubmit = function() {
+      //send error messages
+      $scope.showErrorOnSubmit = true;
       Lesson.addLesson($scope.sendModel);
     }
   }

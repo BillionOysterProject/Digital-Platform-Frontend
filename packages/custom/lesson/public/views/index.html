@@ -1,273 +1,303 @@
 <div class="content" ng-controller="LessonController">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <form ng-submit="onSubmit">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="panel-title">Lesson Upload</div>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <text-input outer-column="col-md-8" in-title="Lesson Title" ng-model="sendModel.lessonUpload.title"></text-input>
-                                <drop-down outer-column="col-md-4" in-title="unit" ng-model="sendModel.lessonUpload.unit" in-selectable-array="defaultArrays.unit"></drop-down>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default ">
-                        <div class="panel-heading ">
-                            <div class="panel-title ">Lesson Overview</div>
-                            <div class="panel-controls ">
-                                <ul>
-                                    <li>
-                                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseExample " aria-expanded="false " aria-controls="collapseExample ">
-                                            <i class="fa fa-chevron-down "></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="collapseExample " class="panel-body collapse in ">
-                            <div class="row ">
-                                <div class="col-md-6 ">
-                                    <div class="row ">
-                                        <drop-down outer-column="col-md-4" in-title="Grade" ng-model="sendModel.lessonOverview.grade"
-                                        in-selectable-array="defaultArrays.grade"></drop-down>
-                                        <drop-down outer-column="col-md-4" in-title="Class Periods" ng-model="sendModel.lessonOverview.classPeriods"
-                                        in-selectable-array="defaultArrays.classPeriod"></drop-down>
-                                        <drop-down outer-column="col-md-4" in-title="Setting" ng-model="sendModel.lessonOverview.setting"
-                                        in-selectable-array="defaultArrays.setting"></drop-down>
-                                    </div>
-                                    <div class="row ">
-                                        <text-input outer-column="col-md-12" in-title="Protocol Connections" ng-model="sendModel.lessonOverview.protocolConnections"></text-input>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <select-two-dropdown outer-column="col-md-12" in-title="Subject Area(s)" placeholder="Select subject areas..." options-array="defaultArrays.subjectAreaOptions" ng-model="sendModel.lessonOverview.subjectAreas"></select-two-dropdown>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <text-area outer-column="col-md-12" in-title="Lesson Summary" ng-model="sendModel.lessonOverview.lessonSummary"></text-area>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-md-12 ">
-                            <div class="panel panel-default ">
-                                <div class="panel-heading ">
-                                    <div class="panel-title ">Lesson Objectives</div>
-                                    <div class="panel-controls ">
-                                        <ul>
-                                            <li>
-                                                <a class="portlet-collapse " data-toggle="collapse " href="#collapseLessonObject" aria-expanded="false " aria-controls="collapseLessonObject ">
-                                                    <i class="fa fa-chevron-down "></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="collapseLessonObject " class="panel-body collapse in ">
-                                    <div class="row ">
-                                        <text-area outer-column="col-md-12" in-title="Objectives" ng-model="sendModel.lessonObjectives"></text-area>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading ">
-                            <div class="panel-title ">Materials & Resources Objectives</div>
-                            <div class="panel-controls ">
-                                <ul>
-                                    <li>
-                                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseMaterials
-                                        " aria-expanded="false " aria-controls="collapseMaterials ">
-                                            <i class="fa fa-chevron-down "></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="collapseMaterials " class="panel-body collapse in ">
-                            <div class="row ">
-                                <div class="col-md-6 ">
-                                    <div class="row ">
-                                        <div class="col-md-12 ">
-                                            <label for="objectives ">Supplies</label>
-                                            <textarea ui-tinymce ng-model="sendModel.materialsResources.supplies"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <div class="row ">
-                                        <div class="col-md-12 ">
-                                            <label for="vocabulary ">Teacher Resources</label>
-                                            <textarea ui-tinymce placeholder="This is a dynamic module area" ng-model="sendModel.materialsResources.teacherResources"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="panel-body ">
-                                    <div class="row ">
-                                        <div class="col-md-8 ">
-                                            <label for="handouts ">Handouts</label>
-                                            <div class="form-group ">
-                                                <label for="exampleInputFile ">File input</label>
-                                                <!-- <input type="file" id="file" name="file"/> -->
-                                                <!-- <input type="file " id="exampleInputFile "> -->
-                                                <!-- Change /upload-target to your upload address -->
-                                                <div class="row ">
-                                                    <div class="col-md-12 ">
-                                                        <form action="/upload-target " class="dropzone "></form>
-                                                    </div>
-                                                </div>
-                                                <form action="/upload-target " class="dropzone " placeholder="This is a dynamic module area "></form>
-                                                <!-- <p class="help-block ">Drag & Drop your Files or upload theme here</p> -->
-                                            </div>
-                                        </div>
-                                        <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-4" in-title="Vocabulary" placeholder="This is a dynamic module area" options-array="defaultArrays.vocabOptions"
-                                            ng-model="sendModel.materialsResources.vocabulary"></select-two-dropdown>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-md-12 ">
-                            <div class="panel panel-default ">
-                                <!-- Background -->
-                                <div class="panel-heading ">
-                                    <div class="panel-title ">Background</div>
-                                    <div class="panel-controls ">
-                                        <ul>
-                                            <li>
-                                                <a class="portlet-collapse " data-toggle="collapse " href="#collapseBackground" aria-expanded="false " aria-controls="collapseBackground ">
-                                                    <i class="fa fa-chevron-down "></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="collapseBackground " class="panel-body collapse in ">
-                                    <div class="row ">
-                                        <div class="col-md-12 ">
-                                            <label for="background ">Background</label>
-                                            <textarea ui-tinymce ng-model="sendModel.background"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-md-12 ">
-                            <!-- Lesson Objectives -->
-                            <div class="panel panel-default ">
-                                <div class="panel-heading ">
-                                    <div class="panel-title ">Instruction Plan</div>
-                                    <div class="panel-controls ">
-                                        <ul>
-                                            <li>
-                                                <a class="portlet-collapse " data-toggle="collapse " href="#collapseInstructionPlan" aria-expanded="false " aria-controls="collapseInstructionPlan ">
-                                                    <i class="fa fa-chevron-down "></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="collapseInstructionPlan " class="panel-body collapse in ">
-                                    <div class="col-lg-12 instruction ">
-                                        <div class="panel panel-transparent ">
-                                            <uib-tabset justified="true" class="tab-content bg-white ">
-                                                <uib-tab heading="Engage" id="tab1Engage ">
-                                                    <div class="row column-seperation ">
-                                                        <div class="col-md-12 ">
-                                                            <label for="objectives ">Engage</label>
-                                                            <textarea ui-tinymce ng-model="sendModel.instructionPlan.engage"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </uib-tab>
-                                                <uib-tab heading="Explore" id="tab2Explore ">
-                                                    <div class="row ">
-                                                        <div class="col-md-12 ">
-                                                            <label for="objectives ">Explore</label>
-                                                            <textarea ui-tinymce ng-model="sendModel.instructionPlan.explore"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </uib-tab>
-                                                <uib-tab heading="Explain" id="tab3Explain ">
-                                                    <div class="row ">
-                                                        <div class="col-md-12 ">
-                                                            <label for="objectives ">Explain</label>
-                                                            <textarea ui-tinymce ng-model="sendModel.instructionPlan.explain"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </uib-tab>
-                                                <uib-tab heading="Elaborate" id="tab4Elaborate ">
-                                                    <div class="row ">
-                                                        <div class="col-md-12 ">
-                                                            <label for="objectives ">Elaborate</label>
-                                                            <textarea ui-tinymce ng-model="sendModel.instructionPlan.elaborate"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </uib-tab>
-                                                <uib-tab heading="Evaluate" id="tab5Evaluate ">
-                                                    <div class="row ">
-                                                        <div class="col-md-12 ">
-                                                            <label for="objectives ">Evaluate</label>
-                                                            <textarea ui-tinymce ng-model="sendModel.instructionPlan.evaluate"></textarea>
-                                                        </div>
-                                                    </div>
-                                                </uib-tab>
-                                            </uib-tabset>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 ">
-                            <div class="panel panel-default ">
-                                <div class="panel-heading ">
-                                    <div class="panel-title ">Standards</div>
-                                    <div class="panel-controls ">
-                                        <ul>
-                                            <li>
-                                                <a class="portlet-collapse " data-toggle="collapse " href="#collapseBoard" aria-expanded="false " aria-controls="collapseBoard ">
-                                                    <i class="fa fa-chevron-down "></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div id="collapseBoard " class="panel-body collapse in ">
-                                    <div class="panel-body ">
-                                        <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-12" in-title="New York City Science Scope & Sequence" placeholder="Text input for now, select 2 in the future"
-                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.nycScienceScopeSequence"></select-two-dropdown>
-                                        </div>
-                                        <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-12" in-title="NGSS Standards" placeholder="Text input for now, select 2 in the future"
-                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.ngssStandards"></select-two-dropdown>
-                                        </div>
-                                        <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-12" in-title="Common Core ELA" placeholder="Text input for now, select 2 in the future"
-                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreEla"></select-two-dropdown>
-                                        </div>
-                                        <div class="row ">
-                                            <select-two-dropdown outer-column="col-md-12" in-title="Common Core Math" placeholder="Text input for now, select 2 in the future"
-                                            options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreMath"></select-two-dropdown>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </form>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form ng-submit="onSubmit" name="lessonForm" novalidate>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Lesson Upload</div>
             </div>
+            <div class="panel-body">
+              <div class="row">
+                <text-input outer-column="col-md-8" in-title="Lesson Title" ng-model="sendModel.lessonUpload.title" show-error-on-submit="showErrorOnSubmit" error-message="Lesson Title is Required" required="true">
+                </text-input>
+                <drop-down outer-column="col-md-4" in-title="unit" ng-model="sendModel.lessonUpload.unit" in-selectable-array="defaultArrays.unit" required="true">
+                </drop-down>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default ">
+            <div class="panel-heading ">
+              <div class="panel-title ">Lesson Overview</div>
+              <div class="panel-controls ">
+                <ul>
+                  <li>
+                    <a class="portlet-collapse " data-toggle="collapse " href="#collapseExample " aria-expanded="false " aria-controls="collapseExample ">
+                      <i class="fa fa-chevron-down "></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="collapseExample " class="panel-body collapse in ">
+              <div class="row ">
+                <div class="col-md-6 ">
+                  <div class="row ">
+                    <drop-down outer-column="col-md-4" in-title="Grade" ng-model="sendModel.lessonOverview.grade" in-selectable-array="defaultArrays.grade" required="true"></drop-down>
+                    <drop-down outer-column="col-md-4" in-title="Class Periods" ng-model="sendModel.lessonOverview.classPeriods" in-selectable-array="defaultArrays.classPeriod" required="true"></drop-down>
+                    <drop-down outer-column="col-md-4" in-title="Setting" ng-model="sendModel.lessonOverview.setting" in-selectable-array="defaultArrays.setting" required="true"></drop-down>
+                  </div>
+                  <div class="row ">
+                    <text-input outer-column="col-md-12" in-title="Protocol Connections" ng-model="sendModel.lessonOverview.protocolConnections" show-error-on-submit="showErrorOnSubmit" error-message="Protocol Connections is Required" required="true">
+                    </text-input>
+                  </div>
+                </div>
+                <div class="col-md-6 ">
+                  <select-two-dropdown outer-column="col-md-12" in-title="Subject Area(s)" placeholder="Select subject areas..." options-array="defaultArrays.subjectAreaOptions" ng-model="sendModel.lessonOverview.subjectAreas" show-error-on-submit="showErrorOnSubmit" required="true"
+                    error-message="You must select at least one Subject Area">
+                  </select-two-dropdown>
+                </div>
+              </div>
+              <div class="row ">
+                <text-area
+                  outer-column="col-md-12"
+                  in-title="Lesson Summary"
+                  ng-model="sendModel.lessonOverview.lessonSummary"
+                  show-error-on-submit="showErrorOnSubmit"
+                  required="true"
+                  error-message="Lesson Summary is required">
+                </text-area>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-12 ">
+              <div class="panel panel-default ">
+                <div class="panel-heading ">
+                  <div class="panel-title ">Lesson Objectives</div>
+                  <div class="panel-controls ">
+                    <ul>
+                      <li>
+                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseLessonObject" aria-expanded="false " aria-controls="collapseLessonObject ">
+                          <i class="fa fa-chevron-down "></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="collapseLessonObject " class="panel-body collapse in ">
+                  <div class="row ">
+                    <text-area
+                      outer-column="col-md-12"
+                      in-title="Objectives"
+                      ng-model="sendModel.lessonObjectives"
+                      show-error-on-submit="showErrorOnSubmit"
+                      required="true"
+                      error-message="Lesson Objectives are required">
+                    </text-area>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading ">
+              <div class="panel-title ">Materials & Resources Objectives</div>
+              <div class="panel-controls ">
+                <ul>
+                  <li>
+                    <a class="portlet-collapse " data-toggle="collapse " href="#collapseMaterials
+                                        " aria-expanded="false " aria-controls="collapseMaterials ">
+                      <i class="fa fa-chevron-down "></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="collapseMaterials " class="panel-body collapse in ">
+              <div class="row ">
+                <div class="col-md-6 ">
+                  <div class="row ">
+                    <div class="col-md-12 ">
+                      <label for="objectives ">Supplies</label>
+                      <!-- <text-area ui-tinymce ng-model="sendModel.materialsResources.supplies"></text-area> -->
+                      <text-area
+                        outer-column="col-md-12"
+                        in-title="Objectives"
+                        ng-model="sendModel.materialsResources.supplies"
+                        show-error-on-submit="showErrorOnSubmit"
+                        required="true"
+                        error-message="Supplies are required">
+                      </text-area>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 ">
+                  <div class="row ">
+                    <div class="col-md-12 ">
+                      <label for="vocabulary ">Teacher Resources</label>
+                      <!-- <text-area ui-tinymce placeholder="This is a dynamic module area" ng-model="sendModel.materialsResources.teacherResources"></text-area> -->
+                      <text-area
+                        outer-column="col-md-12"
+                        in-title="Objectives"
+                        ng-model="sendModel.materialsResources.teacherResources"
+                        show-error-on-submit="showErrorOnSubmit"
+                        required="true"
+                        error-message="Teacher Resources are required">
+                      </text-area>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ">
+                <div class="panel-body ">
+                  <div class="row ">
+                    <div class="col-md-8 ">
+                      <label for="handouts ">Handouts</label>
+                      <div class="form-group ">
+                        <label for="exampleInputFile ">File input</label>
+                        <!-- <input type="file" id="file" name="file"/> -->
+                        <!-- <input type="file " id="exampleInputFile "> -->
+                        <!-- Change /upload-target to your upload address -->
+                        <div class="row ">
+                          <div class="col-md-12 ">
+                            <form action="/upload-target " class="dropzone "></form>
+                          </div>
+                        </div>
+                        <form action="/upload-target " class="dropzone " placeholder="This is a dynamic module area "></form>
+                        <!-- <p class="help-block ">Drag & Drop your Files or upload theme here</p> -->
+                      </div>
+                    </div>
+                    <div class="row ">
+                      <select-two-dropdown outer-column="col-md-4" in-title="Vocabulary" placeholder="This is a dynamic module area" options-array="defaultArrays.vocabOptions" ng-model="sendModel.materialsResources.vocabulary"></select-two-dropdown>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-12 ">
+              <div class="panel panel-default ">
+                <!-- Background -->
+                <div class="panel-heading ">
+                  <div class="panel-title ">Background</div>
+                  <div class="panel-controls ">
+                    <ul>
+                      <li>
+                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseBackground" aria-expanded="false " aria-controls="collapseBackground ">
+                          <i class="fa fa-chevron-down "></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="collapseBackground " class="panel-body collapse in ">
+                  <div class="row ">
+                    <div class="col-md-12 ">
+                      <label for="background ">Background</label>
+                      <textarea ui-tinymce ng-model="sendModel.background"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row ">
+            <div class="col-md-12 ">
+              <!-- Lesson Objectives -->
+              <div class="panel panel-default ">
+                <div class="panel-heading ">
+                  <div class="panel-title ">Instruction Plan</div>
+                  <small>(One of these must be filled out.)</small>
+                  <div class="panel-controls ">
+                    <ul>
+                      <li>
+                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseInstructionPlan" aria-expanded="false " aria-controls="collapseInstructionPlan ">
+                          <i class="fa fa-chevron-down "></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="collapseInstructionPlan " class="panel-body collapse in ">
+                  <div class="col-lg-12 instruction ">
+                    <div class="panel panel-transparent ">
+                      <uib-tabset justified="true" class="tab-content bg-white ">
+                        <uib-tab heading="Engage" id="tab1Engage ">
+                          <div class="row column-seperation ">
+                            <div class="col-md-12 ">
+                              <label for="objectives ">Engage</label>
+                              <textarea ui-tinymce ng-model="sendModel.instructionPlan.engage"></textarea>
+                            </div>
+                          </div>
+                        </uib-tab>
+                        <uib-tab heading="Explore" id="tab2Explore ">
+                          <div class="row ">
+                            <div class="col-md-12 ">
+                              <label for="objectives ">Explore</label>
+                              <textarea ui-tinymce ng-model="sendModel.instructionPlan.explore"></textarea>
+                            </div>
+                          </div>
+                        </uib-tab>
+                        <uib-tab heading="Explain" id="tab3Explain ">
+                          <div class="row ">
+                            <div class="col-md-12 ">
+                              <label for="objectives ">Explain</label>
+                              <textarea ui-tinymce ng-model="sendModel.instructionPlan.explain"></textarea>
+                            </div>
+                          </div>
+                        </uib-tab>
+                        <uib-tab heading="Elaborate" id="tab4Elaborate ">
+                          <div class="row ">
+                            <div class="col-md-12 ">
+                              <label for="objectives ">Elaborate</label>
+                              <textarea ui-tinymce ng-model="sendModel.instructionPlan.elaborate"></textarea>
+                            </div>
+                          </div>
+                        </uib-tab>
+                        <uib-tab heading="Evaluate" id="tab5Evaluate ">
+                          <div class="row ">
+                            <div class="col-md-12 ">
+                              <label for="objectives ">Evaluate</label>
+                              <textarea ui-tinymce ng-model="sendModel.instructionPlan.evaluate"></textarea>
+                            </div>
+                          </div>
+                        </uib-tab>
+                      </uib-tabset>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 ">
+              <div class="panel panel-default ">
+                <div class="panel-heading ">
+                  <div class="panel-title ">Standards</div>
+                  <small>(One of these must be filled out.)</small>
+                  <div class="panel-controls ">
+                    <ul>
+                      <li>
+                        <a class="portlet-collapse " data-toggle="collapse " href="#collapseBoard" aria-expanded="false " aria-controls="collapseBoard ">
+                          <i class="fa fa-chevron-down "></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div id="collapseBoard " class="panel-body collapse in ">
+                  <div class="panel-body ">
+                    <div class="row ">
+                      <select-two-dropdown outer-column="col-md-12" in-title="New York City Science Scope & Sequence" placeholder="Text input for now, select 2 in the future" options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.nycScienceScopeSequence"></select-two-dropdown>
+                    </div>
+                    <div class="row ">
+                      <select-two-dropdown outer-column="col-md-12" in-title="NGSS Standards" placeholder="Text input for now, select 2 in the future" options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.ngssStandards"></select-two-dropdown>
+                    </div>
+                    <div class="row ">
+                      <select-two-dropdown outer-column="col-md-12" in-title="Common Core ELA" placeholder="Text input for now, select 2 in the future" options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreEla"></select-two-dropdown>
+                    </div>
+                    <div class="row ">
+                      <select-two-dropdown outer-column="col-md-12" in-title="Common Core Math" placeholder="Text input for now, select 2 in the future" options-array="defaultArrays.nycScienceScopeOptions" ng-model="sendModel.standards.commonCoreMath"></select-two-dropdown>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default">Close</button>
-            <button type="button" class="btn btn-primary" ng-click="onSubmit()">Save</button>
-        </div>
+      </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default">Close</button>
+      <button type="button" class="btn btn-primary" ng-click="onSubmit()">Save</button>
+    </div>
+  </div>
 </div>
