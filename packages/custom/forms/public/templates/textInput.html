@@ -1,0 +1,18 @@
+<form name="myForm">
+  <div class="{{outerColumn}}">
+  <div class="form-group">
+    <label for="{{inTitle}}">{{inTitle}}</label> <small ng-if="required">(Required)</small>
+    <div class="row">
+      <div class="col-md-12">
+        <input ng-if="required" type="text" class="form-control" placeholder="{{placeHolder}}" name="myName" ng-model="outModel" required>
+        <input ng-if="!required" type="text" class="form-control" placeholder="{{placeHolder}}" ng-model="outModel">
+        <div ng-if="showErrorOnSubmit">
+          <div ng-messages="myForm.myName.$error" style="color:maroon" role="alert">
+            <div ng-message="required">{{errorMessage}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

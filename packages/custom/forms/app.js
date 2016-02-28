@@ -16,7 +16,7 @@ Forms.register(function(app, auth, database) {
   //We enable routing. By default the Package Object is passed to the routes
   Forms.routes(app, auth, database);
 
-  Forms.angularDependencies(['ngDropzone', 'ui.tinymce', 'ui.select']);
+  Forms.angularDependencies(['ngDropzone', 'ui.tinymce', 'ui.select', 'ngMessages']);
 
   return Forms;
 });
